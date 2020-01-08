@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # testProj
 =======
 # README
@@ -26,3 +27,7 @@ Things you may want to cover:
 
 * ...
 >>>>>>> First Commit
+=======
+# FullStackProject-StackOverflow
+Database Schema
+>>>>>>> 1ffb174bd39f08a96bffcf5f666632dbdc80a485
