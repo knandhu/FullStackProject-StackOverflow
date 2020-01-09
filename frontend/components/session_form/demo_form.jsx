@@ -5,7 +5,7 @@ class DemoForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: "user",
+            email: "email@email.com",
             password: "password"
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,46 +18,46 @@ class DemoForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).then(()=>this.props.history.push('/questions'));
     }
 
     render() {
         return (
-            <div className="session-form">
-                <form className="login-box" onSubmit={this.handleSubmit}>
-                    <h1>Welcome To GetAnswers</h1>
-                    {this.props.formType} Login
-                    <div className="input-fields">
-                        <br />
-                        <label htmlFor="">
-                            Username
-              <input
-                                type="text"
-                                className="login-input"
-                                value={this.state.username}
-                                onChange={this.update("username")}
-                            />
-                        </label>
-                        <br />
-                        <label htmlFor="">
-                            Password
-              <input
-                                type="password"
-                                className="login-input"
-                                value={this.state.password}
-                                onChange={this.update("password")}
-                            />
-                        </label>
-                        <br />
-                        <input
-                            className="session-submit"
-                            type="submit"
-                            value={this.props.formType}
-                        />
-                        <br />
-                    </div>
-                </form>
-            </div>
+          <div className="login-form">
+            <form className="login-box" onSubmit={this.handleSubmit}>
+              <div className="login-fields">
+                <label htmlFor="">
+                  Email
+                  <br />
+                  <input
+                    type="text"
+                    className="login-input"
+                    value={this.state.email}
+                    onChange={this.update("email")}
+                  />
+                </label>
+                <br />
+                <label htmlFor="">
+                  Password
+                  <br />
+                  <input
+                    type="password"
+                    className="login-input"
+                    value={this.state.password}
+                    onChange={this.update("password")}
+                  />
+                </label>
+                <br />
+
+                <input
+                  className="login-submit"
+                  type="submit"
+                  value={this.props.formType}
+                />
+                <br />
+              </div>
+            </form>
+          </div>
         );
     }
 }

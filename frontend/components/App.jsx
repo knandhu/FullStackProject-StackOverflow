@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { Route, Redirect, Switch, Link, HashRouter } from "react-router-dom";
-
+import { Route, Redirect, Switch, Link, HashRouter, withRouter } from "react-router-dom";
+import Home from './home/home';
 import NavBarContainer from "./navbar/navbar_container";
 import SignUpFormContainer from "./session_form/signup_form_container";
 import LogInFormContainer from "./session_form/login_form_container";
@@ -11,20 +11,23 @@ import CreateQuestionFormContainer from "./questions/create_question_form_contai
 
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
-const App = () => (
+const App = (state) => (
   <div>
     <header>
       <NavBarContainer />
+      {/* <Route exact path="/" component={NavBarContainer} /> */}
     </header>
+
     <Switch>
+      <AuthRoute exact path='/' component={Home}/>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/demo" component={DemoContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      {/* <ProtectedRoute path="/questions" component={QuestionsContainer} /> */}
-      <ProtectedRoute exact path="/" component={QuestionsContainer} />
-      <ProtectedRoute exact path="/ask" component={CreateQuestionFormContainer}/>
+
+      <ProtectedRoute exact path="/questions" component={QuestionsContainer} />
+      <ProtectedRoute exact path="/questions/ask" component={CreateQuestionFormContainer}/>
     </Switch>
   </div>
 );
 
-export default App;
+export default withRouter(App);

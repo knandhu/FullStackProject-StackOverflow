@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 
 const QuestionIndexItem = (props) => {
     return (
-        <div>
-            
-        <li>{props.question.title}</li>
+        <div id='qindexitem'>   
+        <li id='questions-list' key={props.question.id}>{props.question.title}</li>
       </div>
     );
 };

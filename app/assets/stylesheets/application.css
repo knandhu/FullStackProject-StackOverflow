@@ -16,35 +16,225 @@
 
 
  .session-form{
-    display: flex;
-   justify-content: center;
-   margin-top: 100px;
+   display: flex;
+   flex-direction: row; 
+   /* box-sizing: inherit; */
+   /* justify-content: space-around; */
+   align-items: center;
+   background-color: #fafbfc;
+   height: 100vh;
+   width:500vh;
+   margin: 10px 30px;
+  padding: 30px 60px;
+   border-radius: 2px;
+   
 }
+
+.session-form span{
+   position: fixed;
+   top:30%;
+   left: 10%;
+   right:50%;
+   margin:auto;
+   justify-content: center;
+   flex-direction: column;
+   text-justify: auto;
+   width:400px
+}
+
+@media (max-width: 55em) {
+.session-form span {
+display: none;
+}
+}
+
+
+.session-form span li{
+   list-style: none;
+   line-height: 40px;
+   font-size: 17px;
+}
+
+.session-form span #signup-footer{
+   font-size: 14px;
+   margin-top: 7px;
+   color:rgb(159, 178, 189);
+}
+.session-form span #highlight-text{
+   color: rgb(72, 118, 233);
+}
+
+
+.session-form .signup-box{
+   border: 1px solid black;
+   position: fixed !important;
+   top:20%;
+   left: 50%;
+   right:70%;
+   border-radius: 2%;
+   padding: 20px 10px 20px 10px;
+   font-family: 'Times New Roman', Times, serif;
+   height: 460px;
+   width:400px;
+   background-color: white;
+
+}
+.session-form #footer{
+   font-size: 15px;
+   text-align: justify;
+   padding: 0px 20px 0px 20px;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+.session-form #footer p{
+   padding-top: 40px;
+   font-size: 13px;
+   text-align: center;
+}
+.session-form p{
+   font-size: 13px;
+   padding-left: 20px;
+}
+#checkbox1{
+   /* white-space: nowrap; */
+   display: inline-flex;
+   float:left;
+   padding-left: 10px;
+   padding-bottom: 12px;
+  
+
+}
+#checkbox1 label{
+   margin-left: -170px;
+    font-weight: normal;
+    font-size: 15px;
+    text-align: inherit;
+}
+
+
+.signup-box input{
+   font-size: 17px;
+   padding: 9.8px 9.1px;
+   width:85%;
+   height: 106%;
+   align-content: center;
+   border-radius: 5px;
+   margin-left: 2px;
+  
+}
+
+.signup-box .session-submit{
+      height:10%;
+      width:90%;
+     margin-left: 15px;
+     background-color: rgb(63, 162, 223);
+     color: white;
+     font-size: 13px;
+}
+.signup-box label{
+   font-display: inherit;
+   font-size: 17px;
+   align-content: center;
+   font-weight: bolder;
+   padding-left: 11px;
+   
+   
+}
+
 
 .input-fields{
    display: flex;
    justify-content: center;
    flex-direction: column;
-}
+   
+} 
 
-.login-input{
-    margin-left: 20px;
+.login-form{
+   display: flex;
+   flex-direction: row; 
+   align-items: center;
+   background-color: #fafbfc;
+   height: 100vh;
+   width:500vh;
+   margin: 10px 30px;
+  padding: 30px 60px;
    
 }
 
-.session-submit{
-      text-transform: capitalize;
+.login-form #img{
+   display:flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 73%;
+    left:57%;
+    right:90%;
+    top:22%;
+
+    
 }
 
-.login-box{
-   outline: 1px solid black;
-   padding: 20px;
-	margin:10px auto;
-	max-width: 400px;
-	padding: 20px 12px 10px 20px;
 
+.login-form .login-box{
+   border: 1px solid black;
+   position: fixed;
+   top:30%;
+   left: 50%;
+   right:50%;
+   border-radius: 2%;
+   padding: 10px 10px 20px 10px;
+   font-family: 'Times New Roman', Times, serif;
+   height: 220px;
+   width:300px;
+   background-color: white;
 }
 
+.login-form .login-box .login-input{
+   font-size: 14px;
+   padding: 9.8px 9.1px;
+   width:85%;
+   height: 96%;
+   align-content: center;
+   border-radius: 5px;
+   margin-left: 2px;
+    display: flex;
+   justify-content: center;
+   flex-direction: column;
+  
+}
+
+#login-footer{
+   position: relative;
+   top:60px;
+   padding-left: 50px;
+   
+}
+
+
+.login-box label{
+     font-display: inherit;
+   font-size: 17px;
+   align-content: center;
+   font-weight: bolder;
+   padding-left: 11px;
+   margin-bottom: 10px;
+}
+
+.login-box label #forgot-pwd{
+   display: flex;
+   float:right;
+   font-weight: normal;
+   font-size: 14px;
+}
+
+.login-box input[type='submit']{
+     width:90%;
+     height:680%;
+     padding: 10px 20px;
+     margin-left: 8px; 
+     background-color: rgb(63, 162, 223);
+     color: white;
+     font-size: 15px;
+}
  .header-link {
    text-decoration: none;
    color: black;
@@ -54,7 +244,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
-    background-color: #fafafb;
+    background-color: white;
     border: darkgrey;
     margin-left: auto;
     margin-right: auto;
@@ -101,7 +291,7 @@
 
 .button2{
   background-color: darkgrey;
-  color:rgb(101, 125, 191);
+  color:rgb(47, 94, 223);
   padding: 8px 15px;
   text-align: center;
   cursor: pointer;
@@ -122,6 +312,7 @@
 
 .button1:hover, .button2:hover{
    background-color: grey;
+   color: white;
 }
 
 #nav span #logo-text{
@@ -131,6 +322,12 @@
    top:17px;
    display: flex;
    flex-wrap: nowrap;
+}
+
+@media (max-width: 55em) {
+#nav span #logo-text {
+display: none;
+}
 }
 #nav span #logo-text #ans{
    font-weight: bolder;
@@ -159,3 +356,104 @@
    margin: 10px 10px;
    border-radius: 4px;
 } 
+
+/* Home Page */
+
+#home-page #bg{
+   display: block;
+   margin: auto;
+   height:60vh;
+   max-width: 1864px;
+   width:180vh;
+   image-rendering: crisp-edges;
+
+}
+
+#home-page #home-footer{
+   max-width: 1564px;
+   width:250%;
+   margin:0 auto;
+   padding: 12px 12px 12px 12px;
+   display:flex;
+   flex-flow: row wrap;
+   background-color: rgb(149, 159, 169);
+   color: whitesmoke;  
+   clear:both;
+}
+#home-page #home-footer #items{
+   display: inline-flex; 
+   flex-direction: row;
+   justify-content:space-around;
+   padding-left: 50px;
+}
+
+#home-page #home-footer #items ul{
+   justify-content:space-around;
+   padding-left: 100px;
+}
+
+#home-page #home-footer #items ul li{
+   padding-top: 5px;
+   list-style: none;
+   font-size: 15px;
+}
+
+#home-page #home-footer #items #links{
+   padding-left: 30px;
+   word-wrap: normal;
+   display: inline-flex;
+   flex-direction: row;
+   margin-top: 12px;
+   list-style-type: none;
+   justify-content: flex-end;
+}
+
+
+
+#home-page #home-footer #items #links a{
+   color: lightgray;
+   list-style: none;
+   margin-left: 9px;
+   text-decoration: none;
+}
+#home-page #home-footer #copy-rights{
+   width:100%;
+   text-align: left;
+   font-size: 15px;
+   word-wrap: break-word;
+   padding-left: 70%;
+}
+
+#home-page #text{
+   display: block;
+   margin: auto;
+   max-width: 1264px;
+   width:100%;
+   padding: 10px 40px 10px 40px;
+   text-align: end;
+}
+
+#home-page #divider{
+  margin:0 auto;
+  background: #f2720c;
+  display:block;
+  width:80px;
+  height:6px;
+}
+#home-page #text span{
+   margin:0 auto;
+   display:block;
+   padding-top: 20px;
+   font-size: 20px;
+   text-align: center;
+}
+
+#home-page #text h2{
+   text-align: center;
+}
+
+/* QuestionsIndexItem page */
+
+#qform{
+   padding-top: 50px;
+}

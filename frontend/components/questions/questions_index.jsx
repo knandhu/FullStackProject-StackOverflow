@@ -9,14 +9,13 @@ class QuestionsIndex extends React.Component{
     componentDidMount() {
         this.props.fetchQuestions();
     }
-   
-   // this.props.history.push("/ask");
     render() {
         return (
           <div>
+            
             <span>Top Questions</span>
             <nav>
-              <Link to="/ask">
+              <Link to="/questions/ask">
                 <button type="button">Ask a Question</button>
               </Link>
             </nav>

@@ -15,15 +15,13 @@ export default class QuestionForm extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state);
-        this.setState({
-            title: '',
-            body: ''
-        });
+      this.props.action(this.state)
+        .then(() => this.props.history.push('/questions'));
+      
     }
     render() {
         return (
-            <div>
+            <div id='qform'>
             <form onSubmit={this.handleSubmit}>
               <label htmlFor="">
                 Title
