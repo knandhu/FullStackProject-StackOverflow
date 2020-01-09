@@ -22,8 +22,6 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    console.log("type", this.props.processForm(user));
-    console.log("type", this.props.history);
     this.props.processForm(user).then(()=> this.props.history.push('/questions'));
   }
 
@@ -38,7 +36,6 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="login-form">
         <div id='img'>
