@@ -363,14 +363,14 @@ display: none;
    display: block;
    margin: auto;
    height:60vh;
-   max-width: 1864px;
+   max-width: 1264px;
    width:180vh;
    image-rendering: crisp-edges;
 
 }
 
 #home-page #home-footer{
-   max-width: 1564px;
+   max-width: 1284px;
    width:250%;
    margin:0 auto;
    padding: 12px 12px 12px 12px;
