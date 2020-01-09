@@ -4,12 +4,7 @@ class Home extends React.Component{
     render() {
         return (
           <div id="home-page">
-            <img
-              id="bg"
-              src={window.bgURL}
-              height="500"
-              width="500"
-            />
+            <img id="bg" src={window.bgURL} height="500" width="500" />
             <div id="text">
               <h2>For developers, by developers</h2>
               <div id="divider"></div>
