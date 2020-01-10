@@ -23,15 +23,15 @@ class DemoForm extends React.Component {
 
     render() {
         return (
-          <div className="login-form">
-            <form className="login-box" onSubmit={this.handleSubmit}>
-              <div className="login-fields">
+          <div className="demo-form">
+            <form className="demo-box" onSubmit={this.handleSubmit}>
+              <div className="demo-fields">
                 <label htmlFor="">
                   Email
                   <br />
                   <input
                     type="text"
-                    className="login-input"
+                    className="demo-input"
                     value={this.state.email}
                     onChange={this.update("email")}
                   />
@@ -42,7 +42,7 @@ class DemoForm extends React.Component {
                   <br />
                   <input
                     type="password"
-                    className="login-input"
+                    className="demo-input"
                     value={this.state.password}
                     onChange={this.update("password")}
                   />
@@ -50,7 +50,7 @@ class DemoForm extends React.Component {
                 <br />
 
                 <input
-                  className="login-submit"
+                  className="demo-submit"
                   type="submit"
                   value={this.props.formType}
                 />

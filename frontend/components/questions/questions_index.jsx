@@ -1,6 +1,7 @@
 import React from 'react';
 import QuestionIndexItem from './question_index_item';
 import { Link } from 'react-router-dom';
+import Footer from './../home/footer';
 
 class QuestionsIndex extends React.Component{
     constructor(props) {
@@ -25,6 +26,7 @@ class QuestionsIndex extends React.Component{
                 <QuestionIndexItem key={idx} question={question} />
               </ul>
             ))}
+            {/* <Footer /> */}
           </div>
         );
     }
