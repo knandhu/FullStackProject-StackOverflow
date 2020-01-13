@@ -10,6 +10,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        loaders: ["style-loader", "css-loader?modules"]
+      },
+      {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: {
@@ -21,6 +25,8 @@ module.exports = {
       }
     ]
   },
+
+  
   devtool: "source-map",
   resolve: {
     extensions: [".js", ".jsx", "*"]

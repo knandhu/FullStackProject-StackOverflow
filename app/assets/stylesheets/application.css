@@ -21,9 +21,13 @@
     padding: 0px;
     margin: 0px;
 }
+
+body{
+    overflow-x:hidden;
+}
 #root{
-   min-width: auto;
-   min-height: auto;
+   width: auto;
+   height: auto;
    display: flex;
    flex-direction: column;
 }
@@ -34,6 +38,7 @@
    height:47px;
    display:flex;
    flex-direction: row;
+   /* flex-wrap: wrap; */
    justify-content: space-around;
    border-top: 3px solid #F48024;
    border-bottom: 3px solid #E0E0E0;
@@ -42,6 +47,7 @@
    top:0;
    left: 0;
    right: 0;
+   z-index:1;
 }
 
 .header-link{
@@ -78,9 +84,21 @@
 }
 
 @media (max-width: 55em) {
-#nav span #logo-text {
+.header-link #icon #logo-text{
 display: none;
 }
+}
+
+@media (max-width: 15em) {
+#home-footer #items ul {
+display: none;
+}
+}
+
+@media(max-width:100em) {
+   #main #left-nav{
+      display: none;
+   }
 }
 
 #search-bar{
@@ -140,7 +158,7 @@ display: none;
   font-size: 13px Arial;
 } 
 
-.button1{
+.button1, #q-detail #main #content #button2, #q-index #button{
    background-color: rgb(87, 126, 231);
    color: #fff;
    padding: 8px 15px;
@@ -149,6 +167,19 @@ display: none;
    margin: 2px 2px;
    border-radius: 4px;
 } 
+#q-detail #main #content a{ 
+   /* qdetail  Edit button*/
+   background-color: rgb(87, 126, 231);
+   color: #fff;
+   padding: 8px 15px;
+   text-align: center;
+   cursor: pointer;
+   margin: 2px 2px;
+   border-radius: 4px;
+   list-style-type: none;
+   text-decoration: none;
+   font-size: 13px;
+}
 
 .button1:hover, .button2:hover{
    background-color: grey;
@@ -164,6 +195,23 @@ display: none;
    padding: 10px 10px;
    border-radius: 4px;
 } 
+#home-page{
+       /* max-width: 1264px;
+    width: 100%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto; */
+    
+   width:auto;
+   height:auto;
+   padding:0;
+   margin:0 auto;
+   right:0;
+   left:0;
+}
 
 #home-page #bg{ 
    height:550px;
@@ -179,7 +227,7 @@ display: none;
    margin: auto;
    max-width: 1264px;
    width:100%;
-   padding: 10px 40px 10px 40px;
+   /* padding: 10px 40px 10px 40px; */
    text-align: end;
 }
 
@@ -204,7 +252,7 @@ display: none;
 
 
 
-#home-footer{
+#home-footer, #q-detail #home-footer, #qcreate footer #home-footer{
    margin:0 auto;
    height:232px;
    padding: 32px 12px 12px;
@@ -213,14 +261,15 @@ display: none;
    background-color:#232728;
    color: whitesmoke;  
    clear:both;
-   /* position:fixed; */
-   vertical-align: baseline;
+   position: relative;
+   /* vertical-align: baseline; */
+   bottom: 0;
    
 }
 #home-footer #items{
    display: flex; 
    flex-direction: row;
-   flex-wrap: wrap;
+   /* flex-wrap: wrap; */
    justify-content:space-around;
    padding-left: 50px;
    color: #bac0c4;
@@ -570,10 +619,277 @@ display: none;
      border-radius: 4px;
 }
 
+/* Q Index Page*/ 
+#main, #q-detail #main{
+   display: flex;
+   flex-direction: row;
+   justify-content: start;
 
+   list-style-type: none;
+   position:relative;
+   padding-left:100px;
+   padding-right:100px;
+   line-height: 2.2;
+   padding-top: 55px;
+   width:auto;
+    min-height: 702px;
+   /* min-width:1550px; */
+   /* padding-left:3%; */
+   /* margin-left: 5%; */
+   /* padding-left: 6%; */
+   /* margin-left: 0; */
+}
+#qcreate {
+      display: flex;
+   flex-direction: column;
+   justify-content: start;
+
+   /* list-style-type: none;
+   position:relative;
+   padding-left:100px;
+   padding-right:100px;
+   line-height: 2.2; */
+   /* padding-top: 55px; */
+   /* width:auto;
+    min-height: 702px; */
+}
+
+#main #q-index{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   /* min-width:950px; */
+   width: calc(100% - 438px);
+   box-sizing: border-box;
+}
+
+#main #q-index #main-bar{
+   /* position: relative; */
+   /* top:50px; */
+   /* margin-bottom: 50px; */
+   /* height:auto; */
+   /* width: 70%; */
+   /* display: flex; */
+   /* flex-direction: column;  */
+   /* flex-wrap: wrap; */
+   border-left: 1px solid #d6d9dc ;
+   /* border-right: 1px solid #d6d9dc; */
+   /* width: calc(100% - 164px); */
+   /* min-height: 702px; */
+   min-width:750px;
+   flex-direction: row;
+   /* border-width: inherit; */
+   /* min-width: 450px; */
+   /* flex-direction: column;
+   justify-content: flex-end; */
+   /* left:50%; */
+}
+
+#q-index #side-bar{
+   background-color: #fdf7e3;
+   min-width:300px;
+}
+
+#q-index #askq{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+#main #q-index ul{
+   /* justify-content: flex-start; */
+   /* position: relative;
+   left: 40%; */
+   text-decoration: none;
+   flex-wrap: row;
+   list-style-type: none;
+   vertical-align: middle;
+   border-top: 1px solid #d6d9dc;
+   box-sizing: border-box;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   color: #0063BD;
+   overflow: visible;   
+   max-width:650px;
+}
+#main #q-index li{
+   position: relative;
+   left:10%;
+   word-wrap: break-word;
+   background-color: white;
+   /* list-style-type: none; */
+   /* color:#ffffff; */
+   text-decoration: none !important;
+   /* max-width:950px; */
+   /* width:75%; */
+}
+#q-index #tags, #q-detail #tags {
+   display: flex;
+   flex-direction: row;
+   color: green;
+   justify-content: flex-start;
+   padding: 0;
+   border: 0;
+   margin:0;
+   /* width:19%; */
+}
+#q-index #tags li{
+   padding-left: 5px;
+}
 #qform{
-   padding-top: 100px;
+   /* padding-top: 100px; */
+   position: relative;
+   top: 50px;
+   /* left:300px; */
+   /* left:15%; */
+   min-height:800px;
+   width: 100%;
+   display: flex;
+   flex-direction: column; 
+   background-color: #eff0f1;
+   
+   justify-content:space-around;
+   align-items: center;
+   margin-bottom:40px;
+   /* margin-left: 200px; */
+   /* padding: 24px 24px; */
 } 
 
+#qform #q-box{
+   /* position: fixed; */
+   /* top:18%;
+   left: 3%;
+   right:70%; */
+   border-radius: 2%;
+   padding: 20px 50px 20px 50px;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around;
+   font-family: 'Times New Roman', Times, serif;
+   min-height: 540px;
+   height:auto;
+   width:686px;   
+   background-color: white;
+   box-shadow: 0 4px 8px rgba(60,65,70,0.2);
+}
 
+#qform #q-box #question-fields{
+   -webkit-appearance: none;
+   font-size: 17px;
+   padding: 0.6em 0.7em;
+   margin:0;
+   border: 1px solid black;
+   width:auto;
+   height: auto;
+   min-height: 100%;
+   min-width: 95%;
+   align-content: center;
+   display: flex;
+   align-items: space-around;
+   border-radius: 5px;
+   margin-left: 2px;
+   font-family: 'Helvetica Neue','Times New Roman', Times, serif;
+}
 
+#qform #q-box label{
+   font-display: inherit;
+   font-size: 17px;
+   align-content: center;
+   font-weight: bolder;
+   padding-left: 3px;
+   margin-bottom: 10px;
+}
+#qform #q-box label p{
+   font-weight: normal;
+}
+
+textarea{
+   max-height:700px;
+   min-height:38px;
+   min-width: 103px;
+   width:auto;
+   resize:'none';
+   padding:9px;
+   box-sizing:'border-box';
+   font-size:15px;
+   resize: vertical;
+}
+
+#post-q{
+  background-color: darkgrey;
+  color:rgb(47, 94, 223);
+  padding: 10px 8px;
+  text-align: center;
+  cursor: pointer;
+  margin: 2px 2px;
+  border-radius: 4px;
+  font-size: 13px Arial;
+  width:20%;
+}
+
+#q-index #tags #button, #q-detail #tags li{
+   background-color: #cedfed;
+   color: #32658a;
+   padding: 3px 5px;
+   text-align: center;
+   cursor: pointer;
+   margin: 6px 2px;
+   border-radius: 4px;
+   font-size: 12px;
+   font-family: Arial, Helvetica, sans-serif;
+} 
+
+/* #q-detail{
+  display: flex;
+  flex-direction: row;
+  top:500px;
+  width:auto;
+  height:auto;
+} */
+
+#main #left-nav, #q-detail #left-nav {
+   /* display: flex;
+   flex-direction: row;
+   flex-wrap: wrap; */
+   padding-right: 75px;
+   text-decoration: none;
+   /* width:auto; */
+   /* margin:0 auto; */
+}
+#main #left-nav a
+{
+   text-decoration: none;
+}
+   /* left:4.5%; 
+   padding-left: 280px;
+   list-style: none;
+   width:19%;
+   display: flex;
+   flex-direction: row;
+   margin: 0;
+   /* padding:0; 
+   border:0;
+   line-height: 50px;
+}*/
+
+#main #q-index h2{
+   font-family: 400;
+   font-weight: normal;
+   line-height: 1.4;
+   word-wrap: initial;
+   font-size: 16px;
+   position: relative;
+   bottom:0%;
+   
+   
+}
+#qcreate #qform #q-box #question-fields.quill{
+   display: flex;
+   flex-direction: column;
+} 
+
+#qcreate #qform #q-box #question-fields .ql-container{
+   
+   min-width:100px;
+   min-height:200px;
+}

@@ -24,18 +24,32 @@ const NavBar = ({ currentUser, logout, history }) => {
     </hgroup>
   );
 
+
   return (
     <div id="nav">
-      <Link to="/" className="header-link">
-        <span id="icon">
-          <img src={window.logoURL} height="47" width="40" />
-          <span id="logo-text">
-            <span id="get">get</span>
-            <span id="ans">answers</span>
-          </span>
+      {currentUser ? (
+        <Link to="/questions" className="header-link">
+          <span id="icon">
+            <img src={window.logoURL} height="47" width="40" />
+            <span id="logo-text">
+              <span id="get">get</span>
+              <span id="ans">answers</span>
+            </span>
          
-        </span>
-      </Link>
+          </span>
+        </Link>) : (
+          <Link to="/" className="header-link">
+            <span id="icon">
+              <img src={window.logoURL} height="47" width="40" />
+              <span id="logo-text">
+                <span id="get">get</span>
+                <span id="ans">answers</span>
+              </span>
+
+            </span>
+          </Link>
+        )}
+      
       <form action="">
         <div id="search-bar">
           <div id="search-icon">
@@ -48,7 +62,7 @@ const NavBar = ({ currentUser, logout, history }) => {
       </form>
       {currentUser ? personalGreeting() : sessionLinks()}
     </div>
-  );
-  };
+  )
+}
   
   export default NavBar;

@@ -1,22 +1,26 @@
 import { connect } from "react-redux";
-import { createQuestion } from "../../actions/question_actions";
+import { createQuestion, fetchQuestions } from "../../actions/question_actions";
 import QuestionForm from './question_form';
-const mapStateToProps = ({ session, entities: { users, question } }) => {
+const mapStateToProps = ({ errors, session, entities: { users } }) => {
   // const session = state.session;
   // const users = state.entities.users;
   return ({
     question: {
       title: '',
       body: '',
-      owner_id: users[session.id].id
+      tag_names:[],
+      owner_id: users[session.id].id,
+      new_tag:''
     },
     currentUser: users[session.id],
+    errors:errors.question,
     formType: 'Post Your Question'
 })
 };
 
 const mapDispatchToProps = dispatch => ({
   action: (question) => dispatch(createQuestion(question))
+  // allquestions: () => dispatch(fetchQuestions())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuestionForm);
