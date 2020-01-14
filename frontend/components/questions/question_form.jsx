@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import ReactDOM from 'react-dom';
 import QuestionsIndex from './questions_index';
 import Footer from './../home/footer';
@@ -60,10 +60,13 @@ export default class QuestionForm extends React.Component {
     return e => this.setState({ [field]: e.target.value });
   }
 
+  
   updateBody = (value) => {
-    console.log($(value)[0].innerHTML);
-    // debugger;
-    return (this.setState({ body: value }));
+    // console.log("rich", value.toString());
+    this.setState({
+      body: value
+      // {stringsSomeWithHtml[prop.key]}
+    });
   };            
     addTag() {
       this.setState({
@@ -108,8 +111,8 @@ export default class QuestionForm extends React.Component {
               <label htmlFor="">
                 Title
                 <p>
-                  Be specific and imagine you’re asking a question
-                  to another person
+                  Be specific and imagine you’re asking a question to another
+                  person
                 </p>
                 <input
                   type="text"
@@ -120,19 +123,21 @@ export default class QuestionForm extends React.Component {
               </label>
 
               <br />
-              <label htmlFor="">
+              <label >
                 Body
                 <p>
-                  include all the information someone would need to
-                  answer your question
+                  include all the information someone would need to answer your
+                  question
                 </p>
-                <ReactQuill
-                  theme="snow"
-                  modules={this.modules}
-                  formats={this.formats}
-                  onChange={this.updateBody}
-                  value={this.state.body || ""}
-                />
+                <div id='react-quill'>
+                  <ReactQuill
+                    theme="snow"
+                    modules={this.modules}
+                    formats={this.formats}
+                    onChange={this.updateBody}
+                    value={this.state.body || ""}
+                  />
+                </div>
                 {/* <textarea
                   type="textarea"
                   value={this.state.body}
@@ -142,10 +147,7 @@ export default class QuestionForm extends React.Component {
               <br />
               <label htmlFor="">
                 Tags
-                <p>
-                  Add up to 5 tags to describe what your question
-                  is about
-                </p>
+                <p>Add up to 5 tags to describe what your question is about</p>
                 <input
                   type="text"
                   id="question-fields"

@@ -158,7 +158,8 @@ display: none;
   font-size: 13px Arial;
 } 
 
-.button1, #q-detail #main #content #button2, #q-index #button{
+
+.button1, #q-detail #main #content #button2, #q-index #button, #q-detail #main #content #aform #a-box #post-a{
    background-color: rgb(87, 126, 231);
    color: #fff;
    padding: 8px 15px;
@@ -167,6 +168,9 @@ display: none;
    margin: 2px 2px;
    border-radius: 4px;
 } 
+/* #q-detail #main #content{
+   align-content: space-around;
+} */
 #q-detail #main #content a{ 
    /* qdetail  Edit button*/
    background-color: rgb(87, 126, 231);
@@ -799,6 +803,12 @@ display: none;
    padding-left: 3px;
    margin-bottom: 10px;
 }
+
+/* #qform #q-box label #react-quill{
+   white-space: pre-line;
+   background-color: green;
+} */
+
 #qform #q-box label p{
    font-weight: normal;
 }

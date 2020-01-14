@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const QuestionIndexItem = (props) => {
   // console.log(`/questions/${props.question.id}`)
   // console.log(props.question.id);
-  // debugger;
     return (
       <div id='qindexitem'>  
         

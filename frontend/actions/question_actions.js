@@ -45,10 +45,8 @@ export const fetchQuestions = () => dispatch => {
 
 export const fetchQuestion = (questionId) => dispatch => {
 
-    QuestionAPIUtil.fetchQuestion(questionId).then(question =>
-        dispatch(receiveQuestion(question))
-    )
-
+   return( QuestionAPIUtil.fetchQuestion(questionId).then(question => 
+        dispatch(receiveQuestion(question))))
 };
 export const createQuestion = (question) => dispatch => {
     return (

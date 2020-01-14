@@ -10,6 +10,7 @@ import QuestionsContainer from "./questions/questions_container";
 import CreateQuestionFormContainer from "./questions/create_question_form_container";
 import EditQuestionFormContainer from './questions/edit_question_form_container';
 import QuestionDetailContainer from "./questions/question_detail_container";
+import CreateAnswerFormContainer from './answers/create_answer_form_container';
 // import Footer from './home/footer';
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 

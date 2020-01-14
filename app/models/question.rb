@@ -29,6 +29,7 @@ class Question < ApplicationRecord
 
     has_many :tags, through: :taggings, source: :tag
 
+    has_many :answers, :dependent => :destroy
     def tag_names=(tag_names)
        
         self.tags = tag_names.map do |tag|

@@ -6,7 +6,6 @@ const questionsReducer = (oldState = {}, action) => {
     let nextState;
     switch (action.type) {
         case RECEIVE_ALL_QUESTIONS:
-            // debugger;
             return Object.assign({}, oldState, action.questions);
 
         case RECEIVE_QUESTION:

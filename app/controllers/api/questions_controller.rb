@@ -6,6 +6,7 @@ class Api::QuestionsController < ApplicationController
 
     def show
         @question = Question.find(params[:id])
+        render '/api/questions/show', include: :answers
     end
 
     def create 
