@@ -3,26 +3,17 @@ import ReactDOM from 'react-dom';
 import QuestionsIndex from './questions_index';
 import Footer from './../home/footer';
 import DOMPurify from "dompurify";
-// import ReactQuill from "react-quill"; 
-// import "react-quill/dist/quill.snow.css";
-// import RichTextEditor from "react-rte";
-// const ReactQuill =
-//   typeof window === "object" ? require("react-quill") : () => false;
 
-import ReactQuill from "react-quill";
-// import ReactHtmlParser, {
-//   processNodes,
-//   convertNodeToElement,
-//   htmlparser2
-// } from "react-html-parser";
+import ReactQuill, { Quill } from "react-quill";
+
 import parse from 'html-react-parser';
-// import theme from "react-quill/dist/quill.snow.css";
-// import "react-quill/dist/quill.bubble.css";
+import { createHistory } from 'history';
+
 
 export default class QuestionForm extends React.Component {
   constructor(props) {
     super(props);
-
+    this.props.clearErrors(); 
     this.modules = {
       toolbar: [
         [{ font: [] }],
@@ -62,18 +53,23 @@ export default class QuestionForm extends React.Component {
 
   
   updateBody = (value) => {
-    // console.log("rich", value.toString());
     this.setState({
       body: value
-      // {stringsSomeWithHtml[prop.key]}
     });
   };            
-    addTag() {
+
+
+  addTag() {
+    const tags = this.state.tags ? (
+      this.state.tags.map((tag, idx) => (
+        tag.name
+      ))) : this.state.tag_names; 
       this.setState({
-        tag_names: [...this.state.tag_names, this.state.new_tag],
-        new_tag: ""
+        tag_names: [...tags, this.state.new_tag],
+        new_tag: "" 
       });
-    }
+  }
+  
     renderErrors() {
       return (
         <ul>
@@ -83,20 +79,26 @@ export default class QuestionForm extends React.Component {
         </ul>
       );
     }
+  
     handleSubmit(e) {
       e.preventDefault();
-      this.props
-        .action(this.state)
-        .then(() =>
-          this.setState({
-            title: "",
-            body: "",
-            new_tag: "",
-            tag_names: []
-          })
-        )
-        .then(() => this.props.history.push("/questions"));
+      this.props.formType == "Edit"
+        ? (this.props.action(this.state)
+            .then(() => (this.props.history.push(`/questions/${this.props.question.id}`))
+            ))
+        : this.props
+            .action(this.state)
+            .then(() =>
+              this.setState({
+                title: "",
+                body: "",
+                new_tag: "",
+                tag_names: []
+              })
+            )
+       .then(() => this.props.history.push(`/questions/`));        
     }
+  
     render() {
       return (
         <div id="qcreate">
@@ -123,27 +125,21 @@ export default class QuestionForm extends React.Component {
               </label>
 
               <br />
-              <label >
+              <label>
                 Body
                 <p>
                   include all the information someone would need to answer your
                   question
                 </p>
-                <div id='react-quill'>
-                  <ReactQuill
-                    theme="snow"
-                    modules={this.modules}
-                    formats={this.formats}
-                    onChange={this.updateBody}
-                    value={this.state.body || ""}
-                  />
-                </div>
-                {/* <textarea
-                  type="textarea"
-                  value={this.state.body}
-                  onChange={this.update("body")}
-                /> */}
               </label>
+              <ReactQuill
+              theme="snow"
+              modules={this.modules}
+              formats={this.formats}
+              onChange={this.updateBody}
+              value={this.state.body}
+              />
+
               <br />
               <label htmlFor="">
                 Tags

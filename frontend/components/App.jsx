@@ -11,11 +11,13 @@ import CreateQuestionFormContainer from "./questions/create_question_form_contai
 import EditQuestionFormContainer from './questions/edit_question_form_container';
 import QuestionDetailContainer from "./questions/question_detail_container";
 import CreateAnswerFormContainer from './answers/create_answer_form_container';
+import SearchPage from './questions/search_page';
+import SearchBarContainer from './questions/search_bar_container';
 // import Footer from './home/footer';
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
-  <div>
+  <div id="main-page">
     <header>
       <NavBarContainer />
       {/* <Route exact path="/" component={NavBarContainer} /> */}
@@ -26,25 +28,33 @@ const App = () => (
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/demo" component={DemoContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-       
+
         {/* <AuthRoute exact path="/questions/detail" component={QuestionDetailContainer} /> */}
         <ProtectedRoute
           exact
           path="/questions"
           component={QuestionsContainer}
         />
+        <Route
+          path="/search/q=:searchTerm"
+          component={SearchBarContainer} />
         <ProtectedRoute
           exact
           path="/questions/ask"
           component={CreateQuestionFormContainer}
         />
-        <ProtectedRoute exact path="/questions/:questionId" component={QuestionDetailContainer} />
-        <ProtectedRoute exact path="/questions/:questionId/edit" component={EditQuestionFormContainer} />
+        <ProtectedRoute
+          exact
+          path="/questions/:questionId"
+          component={QuestionDetailContainer}
+        />
+        <ProtectedRoute
+          exact
+          path="/questions/:questionId/edit"
+          component={EditQuestionFormContainer}
+        />
       </Switch>
     </main>
-    {/* <footer>
-      <Footer />
-    </footer> */}
   </div>
 );
 

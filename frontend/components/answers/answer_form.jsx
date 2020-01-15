@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactQuill from "react-quill";
 import AnswerAllContainer from './answer_all_container';
+import { withRouter } from 'react-router-dom';
+import { createHistory } from 'history';
    
 class AnswerForm extends React.Component {
   constructor(props) {
@@ -21,14 +23,17 @@ class AnswerForm extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createAnswer(this.state).then(() =>
-          this.setState({
-            response: ""
-          }))
-        // ).then(()=>this.props.action(this.props.question.id));
+        const answer = Object.assign({}, this.state);
+        this.props
+          .createAnswer(answer, this.props.question)
+          .then(()=> this.props.fetchQuestion(this.props.question))
+          .then(() =>
+            this.setState({
+              response: ""
+            })
+          );
     }
     render() {
-    //   console.log("ansqid", this.props);
     return (
       <div id="aform">
         <form id="a-box" onSubmit={this.handleSubmit}>
@@ -52,4 +57,4 @@ class AnswerForm extends React.Component {
 }
    
 
-export default AnswerForm;
+export default withRouter(AnswerForm);

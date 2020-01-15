@@ -9,8 +9,9 @@ const answersReducer = (oldState = {}, action) => {
             return Object.assign({}, oldState, action.answers);
         
         case RECEIVE_ANSWER:
-              nextState = Object.assign({}, oldState);
-            return nextState[action.answer.id] = action.answer;
+            nextState = Object.assign({}, oldState);
+            nextState[action.answer.id] = action.answer;
+            return nextState;
     
         default:
             return oldState;

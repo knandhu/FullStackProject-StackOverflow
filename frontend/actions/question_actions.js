@@ -3,6 +3,7 @@ import QuestionsIndex from '../components/questions/questions_index';
 import QuestionDetailForm from '../components/questions/question_detail_form';
 // import { receiveErrors } from './session_actions';
 import { createHistory } from 'history';
+import { searchQuestions } from './../util/search_questions_api_util';
 
 export const RECEIVE_ALL_QUESTIONS = 'RECEIVE_ALL_QUESTIONS';
 export const RECEIVE_QUESTION = 'RECEIVE_QUESTION';
@@ -31,7 +32,7 @@ const receiveQErrors = err => ({
     err,
 });
 
-const clearErrors = () => ({
+export const clearErrors = () => ({
     type: CLEAR_QUESTION_ERRORS,
 })
 
@@ -49,23 +50,21 @@ export const fetchQuestion = (questionId) => dispatch => {
         dispatch(receiveQuestion(question))))
 };
 export const createQuestion = (question) => dispatch => {
-    return (
-        QuestionAPIUtil.createQuestion(question).then((question) => dispatch(fetchQuestion(question)),
-        (err)=>dispatch(receiveQErrors(err.responseJSON))));
+    return QuestionAPIUtil.createQuestion(question).then(
+        question => dispatch(receiveQuestion(question))
+      ,(err) => dispatch(receiveQErrors(err.responseJSON))
+    );
 };
 
 export const updateQuestion = (question) => dispatch => {
-    return (QuestionAPIUtil.updateQuestion(question).then((question) => dispatch(receiveQuestion(question)),
-        (err) => dispatch(receiveQErrors(err.responseJSON))));
+    return (QuestionAPIUtil.updateQuestion(question).then((question) => dispatch(receiveQuestion(question))))   
 };
 
 
 export const deleteQuestion = (question) => (dispatch) => {
-    // console.log(QuestionAPIUtil.deleteQuestion(question));
   
     return(
         QuestionAPIUtil.deleteQuestion(question)
             .then(() => dispatch(removeQuestion(question)))
-            // .then((questions) => dispatch(fetchQuestions(questions)))
-                // dispatch(removeQuestion(question)))
     )};
+

@@ -20,13 +20,14 @@ export const fetchQuestion = (questionId) => (
     })  
 );
 
-export const updateQuestion = (question) => {
-    return($.ajax({
+export const updateQuestion = (question) => (  
+    $.ajax({
         url: `/api/questions/${question.id}`,
         method: 'PATCH',
-        data: {question}
+        data: { question }
     })
-)};
+);
+
 
 
 export const deleteQuestion = (question) => {

@@ -22,7 +22,7 @@ const mapStateToProps = (state, { question }) => {
   question:question.id
 })};
 const mapDispatchToProps = (dispatch) => ({
-    createAnswer: answer => dispatch(createAnswer(answer)),
+    createAnswer: (answer, questionId) => dispatch(createAnswer(answer,questionId)),
     fetchQuestion: (questionId)=> dispatch(fetchQuestion(questionId))
 });
 

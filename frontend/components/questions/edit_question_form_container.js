@@ -1,12 +1,21 @@
 import { connect } from "react-redux";
-import { updateQuestion } from "../../actions/question_actions";
+import { updateQuestion, clearErrors } from "../../actions/question_actions";
 import QuestionForm from './question_form';
 const mapStateToProps = ({ errors, session, entities: { users,questions } },ownProps) => {
     // const session = state.session;
     // const users = state.entities.users;
-    // console.log('paramsId', ownProps.match.params.questionId);
+    const ques = questions[ownProps.match.params.questionId];
+
     return ({
-        question: questions[ownProps.match.params.questionId],
+        question: {
+            id:ques.id,
+            title: ques.title,
+            body: ques.body,
+            tag_names: [],
+            tags:ques.tags,
+            owner_id: ques.owner_id,
+            new_tag:""
+        },
         currentUser: users[session.id],
         errors: errors.question,
         formType: 'Edit'
@@ -14,8 +23,8 @@ const mapStateToProps = ({ errors, session, entities: { users,questions } },ownP
 };
 
 const mapDispatchToProps = dispatch => ({
-    action: (question) => dispatch(updateQuestion(question))
-    // allquestions: () => dispatch(fetchQuestions())
+    action: (question) => dispatch(updateQuestion(question)),
+    clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuestionForm);

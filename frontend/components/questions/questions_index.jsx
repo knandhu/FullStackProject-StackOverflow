@@ -13,47 +13,47 @@ class QuestionsIndex extends React.Component{
     }
     render() {
       return (
-        <div id='qindex-main'>
-          <div id='main'>
-
-            <div id='left-nav'>
+        <div id="qindex-main">
+          <div id="main">
+            <div id="left-nav">
               <LeftNavigationBar />
             </div>
-            
-            <div id="q-index">
-              <div id='main-bar'>
-              <div id='askq'>
-              <p>Top Questions</p>
-                <nav> 
-                <Link to="/questions/ask">
-                  <button id="button" type="button">
-                    Ask a Question
-                  </button>
-                </Link>
-                </nav>
-              </div>
 
-              {this.props.question.map((question, idx) => (
-                <ul id='qidxitem' key={idx}>
-                  <QuestionIndexItem key={idx} question={question} />
-                </ul>
-              ))}
-              <h2>Looking for more? Browse the complete list of questions, or popular tags.
-                Help us answer unanswered questions.</h2>
-              </div>
-              <div id='side-bar'>
-                <h3>Blog</h3>
-                <h3>Hot Network Questions</h3>
+            <div id="q-index">
+              <div id="main-bar">
+                <div id="askq">
+                  <h3>Top Questions</h3>
+                  <nav>
+                    <Link to="/questions/ask">
+                      <button id="button" type="button">
+                        Ask a Question
+                      </button>
+                    </Link>
+                  </nav>
+                </div>
+
+                {this.props.question.map((question, idx) => (
+                  <ul id="qidxitem" key={idx}>
+                    <QuestionIndexItem key={idx} question={question} />
+                  </ul>
+                ))}
+                <h2>
+                  Looking for more? Browse the complete list of questions, or
+                  popular tags. Help us answer unanswered questions.
+                </h2>
               </div>
             </div>
-            
+            <div id="side-bar">
+              <h3>Blog</h3>
+              <h3>Hot Network Questions</h3>
+            </div>
           </div>
-                
-            <footer>
-              <Footer />
-            </footer>
-          </div>
-        );
+
+          <footer>
+            <Footer />
+          </footer>
+        </div>
+      );
     }
 };
 

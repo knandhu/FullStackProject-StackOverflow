@@ -5,7 +5,6 @@ import QuestionDetailForm from './question_detail_form';
 
 
 const mapStateToProps = (state, ownProps) => {
-    // console.log(state.entities.questions[ownProps.match.params.questionId]);
     return ({
         answer: {
             response: '',
@@ -19,12 +18,10 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, { question }) => {
-    // console.log('qdetail', question);
     return({
   fetchQuestion: questionId => dispatch(fetchQuestion(questionId)),
   deleteQuestion: question => dispatch(deleteQuestion(question)),
   createAnswer: answer => dispatch(createAnswer(answer)),
-        // requestAnswers: () => dispatch(requestAnswers(questionId))
     })
 };
 

@@ -11,6 +11,7 @@ const questionsReducer = (oldState = {}, action) => {
         case RECEIVE_QUESTION:
             nextState = Object.assign({}, oldState);
             nextState[action.question.id] = action.question;
+            nextState[action.question.id].answers = action.question.answers.slice(0)
             return nextState;
         
         case REMOVE_QUESTION:

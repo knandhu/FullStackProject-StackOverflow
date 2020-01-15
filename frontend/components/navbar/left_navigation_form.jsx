@@ -10,7 +10,9 @@ const LeftNavigationBar = () => (
         <Link to='/questions'>
             <li>Stack Oveflow</li>
         </Link>
-        <li>Tags</li >
+        <Link to='/tags'>
+            <li>Tags</li >
+        </Link>
     <li>Users</li >
     </div>
 );

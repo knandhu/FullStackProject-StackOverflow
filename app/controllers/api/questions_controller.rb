@@ -10,9 +10,11 @@ class Api::QuestionsController < ApplicationController
     end
 
     def create 
+    
         @question = Question.create(question_params)
+        
         if @question.save
-            render 'api/questions/show', include: :tags
+            render 'api/questions/show', include: :tags, include: :answers
         else
             render json: @question.errors.full_messages, status: 422
         end
@@ -21,6 +23,7 @@ class Api::QuestionsController < ApplicationController
     def update
         @question = Question.find(params[:id])
         # if @question.owner_id == current_user.id
+        
         if @question.update(question_params)
             render '/api/questions/show', include: :tags
         else
