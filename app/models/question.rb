@@ -19,11 +19,22 @@ class Question < ApplicationRecord
     validates :title, :body, :owner_id, presence:true
     validates :title, uniqueness:true
 
+
     belongs_to :owner,
     primary_key: :id,
     foreign_key: :owner_id,
     class_name: :User
 
-    # //tag_names
+    has_many :taggings
+
+    has_many :tags, through: :taggings, source: :tag
+
+    has_many :answers, :dependent => :destroy
+    def tag_names=(tag_names)
+       
+        self.tags = tag_names.map do |tag|
+           Tag.find_or_create_by(name: tag)
+        end
+    end
 
 end

@@ -4,9 +4,13 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+gem 'nokogiri', '~> 1.6', '>= 1.6.8'
+gem 'haml'
+gem 'ransack'
 
 gem 'annotate'
 gem 'bootsnap'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2'
 # Use postgresql as the database for Active Record

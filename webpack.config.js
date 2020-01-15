@@ -8,7 +8,12 @@ module.exports = {
     filename: "bundle.js"
   },
   module: {
+     noParse: /node_modules\/quill\/dist/,
     rules: [
+      {
+        test: /\.css$/,
+        loaders: ["style-loader", "css-loader?modules"]
+      },
       {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
@@ -21,6 +26,8 @@ module.exports = {
       }
     ]
   },
+
+  
   devtool: "source-map",
   resolve: {
     extensions: [".js", ".jsx", "*"]

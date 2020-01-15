@@ -46,29 +46,31 @@ class Footer extends React.Component{
                 <li>Other</li>
               </ul>
               <div id="links">
-                <li>
-                  <a href="https://angel.co/jobs">AngelList</a>
-                </li>
-                <br />
-                <li>
-                  <a href="https://www.facebook.com/nandhu.kuppusamy">
-                    Facebook
-                  </a>
-                </li>
-                <br />
-                <li>
-                  <a href="https://github.com/knandhu">GitHub</a>
-                </li>
-                <br />
-                <li>
-                  <a href="https://www.linkedin.com/feed/">LinkedIn</a>
-                </li>
+                <div id="social">
+                  <li>
+                    <a href="https://angel.co/jobs">AngelList</a>
+                  </li>
+                  <br />
+                  <li>
+                    <a href="https://www.facebook.com/nandhu.kuppusamy">
+                      Facebook
+                    </a>
+                  </li>
+                  <br />
+                  <li>
+                    <a href="https://github.com/knandhu">GitHub</a>
+                  </li>
+                  <br />
+                  <li>
+                    <a href="https://www.linkedin.com/feed/">LinkedIn</a>
+                  </li>
+                </div>
+                <div id="copy-rights">
+                  site design / logo © 2020 Stack Exchange Inc; user
+                  contributions licensed under cc by-sa 4.0 with attribution
+                  required. rev 2020.1.8.35739
+                </div>
               </div>
-            </div>
-            <div id="copy-rights">
-              site design / logo © 2020 Stack Exchange Inc; user contributions
-              licensed under cc by-sa 4.0 with attribution required. rev
-              2020.1.8.35739
             </div>
           </div>
         );
