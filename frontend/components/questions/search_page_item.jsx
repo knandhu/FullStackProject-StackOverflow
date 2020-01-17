@@ -2,16 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SearchPageItem = props => {
+    console.log( props.question.tags);
     return (
         <div>
             {props.currentUser ? (
+                <div id='page-item'>
                 <nav>
                     <Link to={`/questions/${props.question.id}`}>
                         {/* <li key={props.question.id}> */}
                         {props.question.title}
-                        {/* </li> */}
                     </Link>
-                </nav>) : (
+                    </nav>
+                    <ul id='tags'>
+                        {props.question.tags.map((tag, id) => (
+                            <li id='tag-name' key={id}>{tag.name}</li>
+                    ))}
+                    </ul>
+                </div>) : (
                     <nav>
                         <Link to={'/login'}>
                             {props.question.title}

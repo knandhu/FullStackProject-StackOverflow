@@ -28,3 +28,9 @@ export const requestAnswers = (questionId) => dispatch => {
             dispatch(receiveAnswers(answers)))
     );
 };
+
+export const requestAnswer = (questionId, answerId) => dispatch => {
+    return (AnswerAPIUtil.fetchAnswer(questionId, answerId)
+        .then(answer => dispatch(receiveAnswer(answer))));
+        // .then((response) => console.log(response)))
+}

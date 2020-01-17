@@ -52,7 +52,7 @@ export default class QuestionForm extends React.Component {
   }
 
   
-  updateBody = (value) => {
+  updateBody(value) {
     this.setState({
       body: value
     });

@@ -17,3 +17,10 @@ export const logout = () =>
     method: "DELETE",
     url: "/api/session"
   });
+
+export const allusers = () => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/users'
+  })
+);
