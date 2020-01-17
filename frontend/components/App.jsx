@@ -13,6 +13,9 @@ import QuestionDetailContainer from "./questions/question_detail_container";
 import CreateAnswerFormContainer from './answers/create_answer_form_container';
 import SearchPage from './questions/search_page';
 import SearchBarContainer from './questions/search_bar_container';
+import TagsContainer from './tags/tags_container';
+import UsersContainer from './users/users_container';
+import NotFound from './not_found';
 // import Footer from './home/footer';
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
@@ -20,7 +23,6 @@ const App = () => (
   <div id="main-page">
     <header>
       <NavBarContainer />
-      {/* <Route exact path="/" component={NavBarContainer} /> */}
     </header>
     <main>
       <Switch>
@@ -29,7 +31,8 @@ const App = () => (
         <AuthRoute exact path="/demo" component={DemoContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
 
-        {/* <AuthRoute exact path="/questions/detail" component={QuestionDetailContainer} /> */}
+        <ProtectedRoute exact path="/tags" component={TagsContainer} />
+        <ProtectedRoute exact path="/users" component={UsersContainer} />
         <ProtectedRoute
           exact
           path="/questions"
@@ -53,6 +56,7 @@ const App = () => (
           path="/questions/:questionId/edit"
           component={EditQuestionFormContainer}
         />
+        <Route path="*" component={NotFound} />
       </Switch>
     </main>
   </div>

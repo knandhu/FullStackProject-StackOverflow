@@ -9,6 +9,7 @@ class Api::AnswersController < ApplicationController
     def show
         @answer = Answer.find(params[:id])
         # @answers = Question.find(params[:question_id]).answers
+        render '/api/answers/show', include: :owner
 
     end
 

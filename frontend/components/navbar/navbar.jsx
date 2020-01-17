@@ -38,12 +38,20 @@ class NavBar extends React.Component {
   };
   personalGreeting() {
     return(
-    <hgroup className="header-group">
-      <img src="assets/prof-icon.png" height="20" width="30" />
-      <img src="assets/inbox-icon.png" height="20" width="30" />
-      <img src="assets/trophy-icon.png" height="20" width="30" />
-      <img src="assets/ques-icon.png" height="20" width="30" />
-      <img src="assets/drop-list-icon.png" height="20" width="30" />
+      <hgroup className="header-group">
+        <div className="dropdown">
+          <img className='dropbtn' src="assets/prof-icon.png" height="20" width="20" />
+          <div className="dropdown-content">
+            <Link to='/users'>Users</Link>
+            <Link to='/tags'>Tags</Link> 
+            <Link to='/questions/ask'>Ask Question</Link>
+          </div>
+        </div>
+      {/* <img src="assets/prof-icon.png" height="20" width="20" /> */}
+      {/* <img src="assets/inbox-icon.png" height="20" width="20" />
+      <img src="assets/trophy-icon.png" height="20" width="20" />
+      <img src="assets/ques-icon.png" height="20" width="20" />
+      <img src="assets/drop-list-icon.png" height="20" width="20" /> */}
       <button className="header-button" onClick={this.props.logout}>
         Log Out
       </button>
