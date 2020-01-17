@@ -8,13 +8,12 @@ const SearchPageItem = props => {
                 <div id='page-item'>
                 <nav>
                     <Link to={`/questions/${props.question.id}`}>
-                        {/* <li key={props.question.id}> */}
                         {props.question.title}
                     </Link>
                     </nav>
                     <ul id='tags'>
                         {props.question.tags.map((tag, id) => (
-                            <li id='tag-name' key={id}>{tag.name}</li>
+                            <li id='button' key={id}>{tag.name}</li>
                     ))}
                     </ul>
                 </div>) : (

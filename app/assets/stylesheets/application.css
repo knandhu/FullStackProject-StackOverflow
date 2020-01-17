@@ -242,10 +242,11 @@ display: none;
    width:100%;
    justify-content: center;
    align-items: center;
-   height:100px;
+   height:auto;
    list-style-type: none;
    text-decoration: none;
    border-style: none;
+
 }
 
 #q-detail #main #content li{
@@ -267,6 +268,7 @@ display: none;
 #q-detail #main #content .quill .ql-container p{
    font-size: 15px;
    font-family: Arial;
+   height:auto;
 }
 
 #aform .quill {
@@ -821,14 +823,32 @@ display: none;
 }
 
 
-#main #q-index #main-bar, #main-page #search-page ul, #q-detail #main #content{
+/* #main-page #search-page ul{
+   border-left: 1px solid #d6d9dc;
+} */
+
+
+#main #q-index #main-bar, #main-page #search-page , #q-detail #main #content{
    border-left: 1px solid #d6d9dc;
    max-width:705px;
    flex-direction: row;
     position: relative;
    right:35px;
    background-color: white;
+   min-height: 800px;
+   height:auto;
 }
+
+#main-page #search-page #search-results #page-item #tags{
+   width:120px;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+}
+
+/* #main-page #search-page #search-results{
+   border-left: 1px solid #d6d9dc;
+} */
 
 .quill-editor{
    background-color: blue;
@@ -1020,7 +1040,7 @@ textarea{
   width:20%;
 }
 
-#q-index #tags #button, #q-detail #tags li, #search-results li #tags li{
+#q-index #tags #button, #q-detail #tags li, #search-results li #tags #button {
    background-color: #cedfed;
    color: #32658a;
    padding: 3px 5px;

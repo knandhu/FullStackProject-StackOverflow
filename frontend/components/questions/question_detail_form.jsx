@@ -29,6 +29,7 @@ class QuestionDetailForm extends React.Component{
             .then(() => this.props.history.push('/questions'))
     }
   render() {
+    
         return (
           <div id="q-detail">
             <div id="main">

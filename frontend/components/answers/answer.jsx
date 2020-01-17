@@ -20,11 +20,6 @@ class Answer extends React.Component{
 }  
 
   render() {
- 
-  
-    // if (this.props.answer.owner) {
-    //   console.log('owner', this.props.answer.owner)
-    // }
     return (
       <div>
         {/* {props.answer.response} */}

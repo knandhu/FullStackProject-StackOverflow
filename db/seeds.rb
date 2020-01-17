@@ -18,7 +18,7 @@ Question.create!(
     associate the command with the desired procedure. This works fine with standalone 
     procedures but I get variable required errors when trying to add object methods to 
     my stringlist. Here's example code:",
-    owner_id:5
+    owner_id:7
 )
 
 Question.create!(
@@ -57,7 +57,7 @@ Question.create!(
     ArrayList<Product> products = new ArrayList<Product>();
     public Float total;
 }",
-    owner_id:9
+    owner_id:7
 )
 
 Question.create!(
@@ -102,7 +102,7 @@ Question.create!(
     body:"So I have an API endpoint that creates a Cache and validate if that cache 
     exist. However the Lookup Cache policy shows different responses across repeated 
     request of the same payload. It would show either true or false across multiple request. Why is this so?.",
-    owner_id:8
+    owner_id:7
 )
 
 Question.create!(
@@ -114,9 +114,6 @@ I know, I'm missing something silly.. Can anyone help me here please?",
     owner_id:9
 )
 
-# 10.times do |i|
-#   Question.create(title: "Question Title ##{i}", body: "Detailed question", owner_id:i)
-# end
+
 end
 
-#
