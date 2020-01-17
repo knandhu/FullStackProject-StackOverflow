@@ -15,11 +15,11 @@
 
 # Introduction
   
-  Get Answers is a question and answer based website related to software technology, where people in need of answers post a question and can get answers from different people who excel in the field.
+  getAnswers is a clone of Stack Overflow, question and answer based website related to software technology. On this site users are able to create new accounts, questions and post an answer for a question.
 
 # Features
 
-Get Answers allow the users:
+getAnswers allow the users:
 
   * to create, edit and delete a question
   * will be able to post an answer for a question
