@@ -37,8 +37,13 @@ export const clearErrors = () => ({
 })
 
 export const fetchQuestions = () => dispatch => {  
+    
     return(
-        QuestionAPIUtil.fetchQuestions().then((questions) =>dispatch(fetchAllQuestions(questions))
+        QuestionAPIUtil.fetchQuestions()
+            // .then((questions) => {
+            //    console.log(questions)
+            // })
+            .then((questions) => dispatch(fetchAllQuestions(questions))
     ))
 
 };

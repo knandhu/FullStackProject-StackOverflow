@@ -26,7 +26,7 @@ class QuestionsIndex extends React.Component{
                   <nav>
                     <Link to="/questions/ask">
                       <button id="button" type="button">
-                        Ask a Question
+                        Ask Question
                       </button>
                     </Link>
                   </nav>

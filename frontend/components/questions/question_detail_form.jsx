@@ -41,7 +41,7 @@ class QuestionDetailForm extends React.Component{
                   <div id="title-ask">
                     <h2>{this.props.question.title}</h2>
                     <nav>
-                      <Link to="/questions/ask">Ask a Question</Link>
+                      <Link to="/questions/ask">Ask Question</Link>
                     </nav>
                   </div>
                   {/* <p>Body:</p> */}

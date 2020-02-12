@@ -1,6 +1,6 @@
 class Api::QuestionsController < ApplicationController
     def index
-        @questions = Question.all.reverse
+        @questions = Question.all.order('created_at DESC')
         render 'api/questions/index', include: :tags
     end
 

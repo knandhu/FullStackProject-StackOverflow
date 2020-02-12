@@ -59,7 +59,7 @@ class LoginForm extends React.Component {
               <br />
               <label htmlFor="">
                 Password
-                <div id="forgot-pwd">Forgot Password?</div>
+                {/* <div id="forgot-pwd">Forgot Password?</div> */}
                 <br />
                 <input
                   type="password"

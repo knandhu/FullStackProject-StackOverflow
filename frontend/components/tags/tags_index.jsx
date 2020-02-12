@@ -22,16 +22,16 @@ class TagsIndex extends React.Component{
               <div id="left-nav">
                 <LeftNavigationBar />
               </div>
-
+              <h3>Tags</h3>
+              <br/>
               <div id="tags">
-                <h3>Tags</h3>
-                <ul>
+              
                   {this.props.tags.map((tag, idx) => (
-                    <li key={idx}>
+                    // <li key={idx}>
                       <TagIndexItem tag={tag} />
-                    </li>
+                   
                   ))}
-                </ul>
+             
               </div>
             </div>
             <footer>

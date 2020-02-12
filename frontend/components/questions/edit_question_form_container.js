@@ -7,14 +7,16 @@ const mapStateToProps = ({ errors, session, entities: { users,questions } },ownP
     const ques = questions[ownProps.match.params.questionId];
 
     return ({
-        question: {
+        question:
+        {
             id:ques.id,
             title: ques.title,
             body: ques.body,
             tag_names: [],
             tags:ques.tags,
             owner_id: ques.owner_id,
-            new_tag:""
+            new_tag: '',
+            // tag_list:[]
         },
         currentUser: users[session.id],
         errors: errors.question,

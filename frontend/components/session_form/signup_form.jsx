@@ -50,9 +50,9 @@ class SignUpForm extends React.Component {
           <li>Earn reputation and badges</li>
           <div id="signup-footer">
             Use the power of Stack Overflow inside your organization. Try a
-            <div id="highlight-text">
+            {/* <div id="highlight-text"> */}
               free trial of Stack Overflow for Teams.
-            </div>
+            {/* </div> */}
           </div>
         </span>
 
@@ -96,13 +96,7 @@ class SignUpForm extends React.Component {
               least 1 letter and 1 number.
             </p>
 
-            <div id="checkbox1">
-              <input type="checkbox" id="cb" />
-              <label htmlFor="cb">
-                Opt-in to receive occasional product updates, user research
-                invitations, company announcements, and digests
-              </label>
-            </div>
+            <br />
 
             <input
               className="session-submit"
