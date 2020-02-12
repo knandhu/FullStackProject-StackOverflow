@@ -25,6 +25,7 @@ getAnswers allow the users:
   * will be able to post an answer for a question
   * able to search questions based on Question title and tags, that attached with question to make it as a category
   
+  ![](askQ2.mov)  
 # Technologies
 
 * Front-End: React/Redux
