@@ -1,33 +1,42 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# testProj
-=======
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# getAnswers
 
-Things you may want to cover:
+# Table of Contents
 
-* Ruby version
+  1.Introduction
+  
+  2.Features
+  
+  3.Technologies
+  
+  4.Live Website
+  
+  5.Future Enhancements
 
-* System dependencies
+# Introduction
+  
+  getAnswers is a clone of Stack Overflow, question and answer based website related to software technology. On this site users are able to create new accounts, questions and post an answer for a question.
 
-* Configuration
+# Features
 
-* Database creation
+getAnswers allow the users:
 
-* Database initialization
+  * to create, edit and delete a question
+  * will be able to post an answer for a question
+  * able to search questions based on Question title and tags, that attached with question to make it as a category
+  
+# Technologies
 
-* How to run the test suite
+* Front-End: React/Redux
+* Back-End: Rails/PostgresSQL
 
-* Services (job queues, cache servers, search engines, etc.)
+# Live Website
 
-* Deployment instructions
+[Click here](https://get-ans.herokuapp.com/#/) for live website
 
-* ...
->>>>>>> First Commit
-=======
-# FullStackProject-StackOverflow
-Database Schema
->>>>>>> 1ffb174bd39f08a96bffcf5f666632dbdc80a485
+# Future Enhancements
+
+* implement a logic that allows users to up/down vote a question/answer
+* create user profile with picture
+
+
