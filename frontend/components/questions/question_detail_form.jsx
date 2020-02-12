@@ -17,12 +17,11 @@ class QuestionDetailForm extends React.Component{
         super(props);
         this.deleteQuestion = this.deleteQuestion.bind(this);
       this.state = this.props.answer;
-      this.props
-        .fetchQuestion(this.props.question.id)
+      this.props.fetchQuestion(this.props.answer.question_id);
     }
     componentDidMount() {
         this.props
-          .fetchQuestion(this.props.question.id)
+          .fetchQuestion(this.props.answer.question_id)
     }
     deleteQuestion() {
         this.props.deleteQuestion(this.props.question)

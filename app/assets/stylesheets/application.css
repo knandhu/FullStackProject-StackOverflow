@@ -1169,3 +1169,6 @@ textarea{
    font-size: 13px;
 }
 
+input.searchbar:focus{
+   outline-width: 0;
+}

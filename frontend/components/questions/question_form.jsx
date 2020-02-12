@@ -61,7 +61,7 @@ export default class QuestionForm extends React.Component {
       : this.state.tag_names; 
     
     const lastele = this.props.formType == 'Edit' ?
-      this.state.tag_names.slice(this.state.tags.length - 1):null;
+      this.state.tag_names.slice(this.state.tags.length):null;
      tags = this.props.formType == 'Edit' ?
       [...this.state.tags.map((tag, idx) => tag.name), ...lastele] : tags;  
 
