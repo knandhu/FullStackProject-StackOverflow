@@ -7,7 +7,7 @@ class Footer extends React.Component {
         <div id="items">
           <img id="footer-logo" src={window.logoURL} height="70" width="40" />
           <ul>
-            STACK OVERFLOW
+            GET ANSWERS
             <li>Questions </li>
             <li>Jobs</li>
             <li>Developer Jobs Directory</li>
@@ -33,7 +33,7 @@ class Footer extends React.Component {
             <li>Contact Us</li>
           </ul>
           <ul>
-            STACK EXCHANGE NETWORK
+            GET ANSWERS NETWORK
             <li>Technology </li>
             <li>Life/Arts</li>
             <li>Culture/Recreation</li>
@@ -55,7 +55,7 @@ class Footer extends React.Component {
               </li>
             </div>
             <div id="copy-rights">
-              site design / logo © 2020 Stack Exchange Inc; user contributions
+              site design / logo © 2020 Get Answers Inc; user contributions
               licensed under cc by-sa 4.0 with attribution required. rev
               2020.1.8.35739
             </div>

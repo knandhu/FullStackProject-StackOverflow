@@ -15,7 +15,7 @@ class Home extends React.Component{
               <br />
               <div id="divider"></div>
               <span>
-                Stack Overflow is an open community for anyone that codes. We
+                Get Answers is an open community for anyone that codes. We
                 help you get answers to your toughest coding questions, share
                 knowledge with your coworkers in private, and find your next
                 dream job.
@@ -31,15 +31,15 @@ class Home extends React.Component{
                 share knowledge and work effectively.
               </span>
               <br />
-              <h2>Questions are everywhere, answers are on Stack Overflow</h2>
+              <h2>Questions are everywhere, answers are on Get Answers</h2>
               <br />
               <div id="divider"></div>
               <span>
                 Ask a question publicly on 170+ Stack Exchange sites or
-                privately using Stack Overflow for Teams.
+                privately using Get Answers for Teams.
               </span>
               <br />
-              <h2>Learn and grow with Stack Overflow</h2>
+              <h2>Learn and grow with Get Answers</h2>
               <br />
               <div id="divider"></div>
               <span>

@@ -8,7 +8,7 @@ const LeftNavigationBar = () => (
     </Link>
     <li>Public</li>
     <Link to="/questions">
-      <li>Stack Oveflow</li>
+      <li>Get Answers</li>
     </Link>
     <nav>
       <Link to="/tags">
