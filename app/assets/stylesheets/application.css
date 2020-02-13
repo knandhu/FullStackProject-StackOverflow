@@ -111,6 +111,11 @@ body {
     display: none;
   }
 }
+@media (max-width: 90em) {
+#search-page #left-nav {
+  display: none;
+  }
+}
 
 @media (max-width: 70em) {
   #main #left-nav {
@@ -121,6 +126,7 @@ body {
   /* padding-left: 200px; */
   justify-content: space-around;
 }
+
 
 #search-bar {
   display: flex;
@@ -253,6 +259,8 @@ body {
 }
 #q-detail #main #content #answers .quill .ql-container .ql-editor {
   border-top: 1px solid #d6dadc;
+  position: relative;
+  right:50px;
 }
 #q-detail #main #content #answers #owner {
   color: #0178cd;
@@ -261,6 +269,8 @@ body {
   font-size: 15px;
   font-family: Arial;
   height: auto;
+  position: relative;
+  left: 10px;
 }
 
 #aform .quill {
@@ -268,6 +278,7 @@ body {
   border-color: #cfd2d5;
   /* box-sizing: inherit; */
 }
+
 
 #q-detail #main content #tags {
   list-style-type: none;
@@ -366,7 +377,15 @@ body {
 #home-page #text h2 {
   text-align: center;
 }
+#main-page #tag-page footer #home-footer {
+  position:relative;
+  top:390px;
+}
 
+#main-page #user-page footer #home-footer{
+  position: relative;
+  top:300px;
+}
 #home-footer,
 #q-detail #home-footer,
 #qcreate footer #home-footer,
@@ -743,9 +762,16 @@ body {
   line-height: 2.2;
   padding-top: 55px;
   width: auto;
+  height:auto;
   max-width: 77.2307692rem !important;
   min-width: 75rem;
   margin: 0 auto;
+}
+
+#root #main-page #search-page #left-nav{
+  position: fixed;
+  left:200px;
+  border:none;
 }
 
 #main-bar h2 {
@@ -760,13 +786,14 @@ body {
   justify-content: start;
 }
 
-#tag-page #main #tags {
-  min-width: 700px;
+#tag-page #main #tags, #user-page #main #user-details {
+  /* min-width: 700px;
+  min-height: 700px; */
   position: relative;
   top: 40px;
-  right: 130px;
+  right: 290px;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   padding: 10px;
   /* flex-direction: column; */
   /* background-color: blue; */
@@ -790,7 +817,7 @@ body {
   justify-content: space-around;
   min-width: 950px;
   width: calc(100% - 438px);
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   min-height: 750px;
   padding-top: 0;
   margin: 0 auto;
@@ -801,7 +828,6 @@ body {
 } */
 
 #main #q-index #main-bar,
-#main-page #search-page,
 #q-detail #main #content {
   border-left: 1px solid #d6d9dc;
   max-width: 705px;
@@ -812,6 +838,9 @@ body {
   min-height: 800px;
   height: auto;
 }
+#q-detail #main #content {
+  padding-left: 50px;
+}
 
 #main-page #search-page #search-results #page-item #tags {
   width: 120px;
@@ -820,9 +849,19 @@ body {
   justify-content: flex-start;
 }
 
-/* #main-page #search-page #search-results{
+#main-page #search-page #search-results{
+   /* border-left: 1px solid #d6d9dc; */
+   position: relative;
+   right:208px;
+}
+
+#main-page #search-page #search-results #border{
    border-left: 1px solid #d6d9dc;
-} */
+   min-height: 700px;
+   min-width: 500px;
+  position:relative;
+  left:100px;
+}
 
 .quill-editor {
   background-color: blue;
@@ -1034,21 +1073,19 @@ textarea {
   text-decoration: none;
   color: #318cd4;
 }
-#search-page #left-nav {
+/* #search-page #left-nav {
   position: relative;
   right: 20px;
-}
+} */
 
 #search-page #left-nav a {
   color: black;
 }
 
 #user-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style-type: none;
-  line-break: 4;
+  position: relative;
+  bottom:30px;
+  left:20px;
 }
 
 #main #left-nav,
@@ -1063,7 +1100,7 @@ textarea {
   text-decoration: none;
   min-width: 180px;
   max-width: 250px;
-  /* padding-left: 350px; */
+  /* border-right: 1px solid #d6d9dc; */
   /* width:auto; */
   /* margin:  0 auto; */
 }
@@ -1101,17 +1138,6 @@ textarea {
   min-width: 100px;
   min-height: 200px;
 }
-
-#root #main-page #user-details {
-  margin-top: 100px;
-}
-
-/* #root #main-page #nav .header-group img{
-   /* padding-top: 10px; 
-   display: inline-flex;
-   flex-direction: column;
-    justify-content: space-evenly;  
-} */
 
 #root #main-page #nav .header-group .dropdown {
   position: relative;
@@ -1159,4 +1185,40 @@ textarea {
 
 input.searchbar:focus {
   outline-width: 0;
+}
+
+#public{
+  margin-left: 10px;
+}
+
+#globe{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right:16px;
+}
+#globe #glbimg{
+  position: relative;
+  top:4px;
+}
+
+
+#leftnav a, #search-page #left-nav #leftnav {
+  color: #535A60;
+  /* z-index:1; */
+}
+
+
+#users{
+  position: relative;
+  right:300px;
+  top:25px;
+} 
+
+#root #main-page main #tag-page #main #tags div, #users div{
+
+  border: 1px solid #d6dadc;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
 }

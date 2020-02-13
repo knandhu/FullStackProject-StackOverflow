@@ -4,7 +4,7 @@ const UserIndexItem = (props) => {
     return (
       
         
-          <li key={props.user.id}>Name:{props.user.username}</li>
+          <div key={props.user.id}>{props.user.username}</div>
       
         
       

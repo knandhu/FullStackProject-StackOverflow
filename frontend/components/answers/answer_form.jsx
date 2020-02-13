@@ -85,7 +85,7 @@ class AnswerForm extends React.Component {
             onChange={this.updatestate}
             value={this.state.response || ''}
           />
-
+          <br />
           <button id="post-a" type="submit">
             Post Your Answer
           </button>

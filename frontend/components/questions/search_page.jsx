@@ -31,7 +31,8 @@ export default class SearchPage extends React.Component {
               <div id="left-nav">
                 <LeftNavigationBar />
               </div>
-                <ul id='search-results'>
+              <ul id='search-results'>
+                <div id='border'>
                 <h3>Search Results</h3>
                 {this.props.results.length != 0 ? (
                   this.props.results.map((ques, idx) => (
@@ -41,7 +42,8 @@ export default class SearchPage extends React.Component {
                   ))
                 ) : (
                   <h5>"No Results Found"</h5>
-                )}
+                    )}
+                </div>
               </ul>
             </div>
             

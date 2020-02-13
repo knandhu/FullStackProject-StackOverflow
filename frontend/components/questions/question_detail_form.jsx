@@ -58,6 +58,20 @@ class QuestionDetailForm extends React.Component{
                       ))}
                     </ul>
                   ) : null}
+                  {this.props.question.owner_id ===
+                    this.props.currentUser.id ? (
+                      <div>
+                        <Link
+                          id="button1"
+                          to={`/questions/${this.props.question.id}/edit`}
+                        >
+                          Edit
+                      </Link>
+                        <button id="button2" onClick={this.deleteQuestion}>
+                          Delete
+                      </button>
+                      </div>
+                    ) : null}
 
                   {this.props.question.answers ? (
                     <ul>
@@ -71,20 +85,7 @@ class QuestionDetailForm extends React.Component{
                       ))}
                     </ul>
                   ) : null}
-                  {this.props.question.owner_id ===
-                  this.props.currentUser.id ? (
-                    <div>
-                      <Link
-                        id="button1"
-                        to={`/questions/${this.props.question.id}/edit`}
-                      >
-                        Edit
-                      </Link>
-                      <button id="button2" onClick={this.deleteQuestion}>
-                        Delete
-                      </button>
-                    </div>
-                  ) : null}
+              
                   <CreateAnswerFormContainer question={this.props.question} />
                 </div>
               ) : null}

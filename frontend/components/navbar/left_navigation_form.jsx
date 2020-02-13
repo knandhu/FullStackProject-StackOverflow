@@ -2,13 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const LeftNavigationBar = () => (
-  <div>
+  <div id='leftnav'>
     <Link to="/questions">
       <li>Home</li>
     </Link>
     <li>Public</li>
-    <Link to="/questions">
-      <li>Get Answers</li>
+    <div id='public'>
+      <Link to="/questions">
+        <div id='globe'>
+        <img id='glbimg' src="assets/globefinal.png" height='19' width='19' alt=""/>
+          <li>Get Answers</li>
+        </div>
     </Link>
     <nav>
       <Link to="/tags">
@@ -17,7 +21,8 @@ const LeftNavigationBar = () => (
         </nav>
         <Link to='/users'>
             <li>Users</li>
-        </Link>
+      </Link>
+    </div>
   </div>
 );
 

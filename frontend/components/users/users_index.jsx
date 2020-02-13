@@ -1,5 +1,8 @@
 import React from 'react';
 import UserIndexItem from './user_index_item';
+import LeftNavigationBar from './../navbar/left_navigation_form';
+import Footer from './../home/footer';
+
 
 class UsersIndex extends React.Component{
     constructor(props) {
@@ -11,13 +14,24 @@ class UsersIndex extends React.Component{
 
     render() {
         return (
-            <div>
-                <ul id='user-details'>
-                    <h1>Users' List</h1>
+            <div id="user-page">
+                <div id="main">
+                    <div id="left-nav">
+                        <LeftNavigationBar />
+                    </div>
+                    <br />
+                    <div id="users">
+                    <h3>Users</h3>
+                <div id='user-details'>
                 {this.props.users.map((user, idx) => 
                     <UserIndexItem user={user} key={idx}/>
                 )}
-                 </ul>
+                 </div>
+                    </div>
+                </div>
+                <footer>
+                    <Footer />
+                </footer>
             </div>
         )
     }
