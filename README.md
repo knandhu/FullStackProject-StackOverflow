@@ -49,6 +49,16 @@
   
   * Any logged in user can answer a question with rich text features
   * Each answer displayed with username
+  
+  ```javascript
+  export const createAnswer = (answer,question_id) => (
+    $.ajax({
+        url: `/api/questions/${question_id}/answers`,
+        method: 'POST',
+        data: {answer}
+    })
+)
+```
 
 
 ## Search Questions
