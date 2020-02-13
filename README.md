@@ -19,6 +19,11 @@
 
 # Features and MVPs
 
+## SignUp, Login
+  
+  * Users can sign up to create an account
+  * Signed up user can login to their account
+
 ## Questions
 
   * Logged in user can ask a question wanting to get an answer, rich text can be used for body of the question
