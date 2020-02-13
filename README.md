@@ -48,7 +48,7 @@
 # Technologies
 
 * Front-End: `React`, `Redux`
-* Back-End: `Rails`, `PostgresSQL`
+* Back-End: `Ruby on Rails`, `PostgresSQL`
 
 # Live Website
 
