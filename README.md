@@ -17,22 +17,40 @@
   
   getAnswers is a clone of Stack Overflow, question and answer based website related to software technology. On this site users are able to create new accounts, questions and post an answer for a question.
 
-# Features
+# Features and MVPs
 
-getAnswers allow the users:
-
-  * to create, edit and delete a question
-  * will be able to post an answer for a question
-  * able to search questions based on Question title and tags, that attached with question to make it as a category
+## SignUp, Login
   
+  * Users can sign up to create an account
+  * Signed up user can login to their account
+
+## Questions
+
+  * Logged in user can ask a question wanting to get an answer, rich text can be used for body of the question
+  * Can create question with tags attached to it
+  * Question owner can edit/delete question
+
+  
+## Answer
+  
+  * Any logged in user can answer a question with rich text features
+  * Each answer displayed with username
+
+
+## Search Questions
+
+  * User can search questions based on title or tags
+
+  
+
 # Technologies
 
-* Front-End: React/Redux
-* Back-End: Rails/PostgresSQL
+* Front-End: `React`, `Redux`
+* Back-End: `Rails`, `PostgresSQL`
 
 # Live Website
 
-[Click here](https://get-ans.herokuapp.com/#/) for live website
+[GetAnswers](https://get-ans.herokuapp.com/#/) live website
 
 # Future Enhancements
 
