@@ -17,7 +17,7 @@
   
   getAnswers is a clone of Stack Overflow, question and answer based website related to software technology. On this site users are able to create new accounts, questions and post an answer for a question.
   
-  ![LandingPage](./readme/GetAnsLanding.png)
+  ![LandingPage](./readme/LandingPage.gif)
 
 # Features and MVPs
 
