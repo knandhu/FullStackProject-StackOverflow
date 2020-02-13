@@ -33,6 +33,16 @@
   * Question owner can edit/delete question
   
     ![LandingPage](./readme/Question.gif)
+    
+    ```ruby on rails
+    
+    def tag_names=(tag_names)   
+        self.tags = tag_names.map do |tag|
+           Tag.find_or_create_by(name: tag)
+        end
+    end
+    
+    ```
 
   
 ## Answer
@@ -40,7 +50,6 @@
   * Any logged in user can answer a question with rich text features
   * Each answer displayed with username
 
-  ![LandingPage](./readme/answer.gif)
 
 ## Search Questions
 
@@ -48,6 +57,18 @@
 
     ![LandingPage](./readme/search.gif)
 
+
+```javascript
+  componentDidUpdate() {
+    
+    if (this.state.searchTerm !== this.props.match.params.searchTerm) {
+        this.props.search(this.props.searchTerm)
+            .then(() => this.setState({
+            searchTerm: this.props.searchTerm
+        }));
+    } 
+    }
+```
 # Technologies
 
 * Front-End: `React`, `Redux`
