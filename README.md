@@ -31,6 +31,8 @@
   * Logged in user can ask a question wanting to get an answer, rich text can be used for body of the question
   * Can create question with tags attached to it
   * Question owner can edit/delete question
+  
+    ![LandingPage](./readme/Question.gif)
 
   
 ## Answer
@@ -38,12 +40,13 @@
   * Any logged in user can answer a question with rich text features
   * Each answer displayed with username
 
+  ![LandingPage](./readme/answer.gif)
 
 ## Search Questions
 
   * User can search questions based on title or tags
 
-  
+    ![LandingPage](./readme/search.gif)
 
 # Technologies
 
