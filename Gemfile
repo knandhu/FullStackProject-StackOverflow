@@ -4,7 +4,8 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-gem 'nokogiri', '~> 1.10.8', '>= 1.10.8'
+# gem 'nokogiri', '~> 1.6', '>= 1.6.8'
+gem 'nokogiri', '~> 1.10', '>= 1.10.8'
 gem 'haml'
 gem 'ransack'
 
