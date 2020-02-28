@@ -11,6 +11,10 @@ class MainController < ApplicationController
 
      end
 
+     def tag_search
+         @questions = Question.includes(:tags).where('tags.name = ?', 'second').references(:Tag)
+     end
+
      private 
      def force_json
         request.format = :json

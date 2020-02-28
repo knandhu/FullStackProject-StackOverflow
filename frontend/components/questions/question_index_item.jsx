@@ -14,7 +14,7 @@ const QuestionIndexItem = (props) => {
         <div id="tags">
         {props.question.tags.map((tag, id) => (
           // <ul key={id}> 
-          <li id="button" key={id}>{tag.name}</li>
+          <li onClick={tag_search} id="button" key={id}>{tag.name}</li>
         ))}
         </div>
       </div>
@@ -22,3 +22,7 @@ const QuestionIndexItem = (props) => {
 };
 
 export default QuestionIndexItem;
+
+const tag_search = () => {
+  
+}
