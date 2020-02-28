@@ -13,6 +13,7 @@ class MainController < ApplicationController
 
      def tag_search
          @questions = Question.includes(:tags).where('tags.name = ?', 'second').references(:Tag)
+         @questions
      end
 
      private 
