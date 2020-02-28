@@ -12,7 +12,6 @@ class Answer extends React.Component{
 
 
   componentDidMount() {
-    // if (this.props.answer.id) {
     this.props.fetchAns(this.props.questionId, this.props.answer.id)
       .then(() => this.setState({
         answer: this.props.answer

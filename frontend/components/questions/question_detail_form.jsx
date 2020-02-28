@@ -89,7 +89,7 @@ class QuestionDetailForm extends React.Component{
                   <CreateAnswerFormContainer question={this.props.question} />
                 </div>
               ) : null}
-              <div id="side-bar">
+              {/* <div id="side-bar">
                 <div id='blog'>
                   <h3>Blog</h3>
                   <li>Winter persists, but Winter Bash 2019 has drawn to a close!</li>
@@ -104,7 +104,7 @@ class QuestionDetailForm extends React.Component{
                   <li>Is chord scale theory an unhelpful starting point for players?</li>
                   <li>Is there a robust way to align the baseline of subscripts?</li>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <footer>

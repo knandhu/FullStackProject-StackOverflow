@@ -49,14 +49,6 @@ class AnswerForm extends React.Component {
   }
 
 
-  // updatestate(contents,delta,source,editor) {
-   
-  //   this.setState({
-  //     response: contents
-  //   });
- 
-  // }
-
 
   handleSubmit(e) {
     e.preventDefault();

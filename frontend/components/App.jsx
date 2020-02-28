@@ -1,21 +1,28 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { Route, Redirect, Switch, Link, HashRouter, withRouter } from "react-router-dom";
-import Home from './home/home';
+import {
+  Route,
+  Redirect,
+  Switch,
+  Link,
+  HashRouter,
+  withRouter
+} from "react-router-dom";
+import Home from "./home/home";
 import NavBarContainer from "./navbar/navbar_container";
 import SignUpFormContainer from "./session_form/signup_form_container";
 import LogInFormContainer from "./session_form/login_form_container";
 import DemoContainer from "./session_form/demo_container";
 import QuestionsContainer from "./questions/questions_container";
 import CreateQuestionFormContainer from "./questions/create_question_form_container";
-import EditQuestionFormContainer from './questions/edit_question_form_container';
+import EditQuestionFormContainer from "./questions/edit_question_form_container";
 import QuestionDetailContainer from "./questions/question_detail_container";
-import CreateAnswerFormContainer from './answers/create_answer_form_container';
-import SearchPage from './questions/search_page';
-import SearchBarContainer from './questions/search_bar_container';
-import TagsContainer from './tags/tags_container';
-import UsersContainer from './users/users_container';
-import NotFound from './not_found';
+import CreateAnswerFormContainer from "./answers/create_answer_form_container";
+import SearchPage from "./questions/search_page";
+import SearchBarContainer from "./questions/search_bar_container";
+import TagsContainer from "./tags/tags_container";
+import UsersContainer from "./users/users_container";
+import NotFound from "./not_found";
 // import Footer from './home/footer';
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
@@ -38,9 +45,7 @@ const App = () => (
           path="/questions"
           component={QuestionsContainer}
         />
-        <Route
-          path="/search/q=:searchTerm"
-          component={SearchBarContainer} />
+        <Route path="/search/q=:searchTerm" component={SearchBarContainer} />
         <ProtectedRoute
           exact
           path="/questions/ask"

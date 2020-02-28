@@ -43,7 +43,7 @@ class QuestionsIndex extends React.Component{
                 </h2>
               </div>
             </div>
-            <div id="side-bar">
+            {/* <div id="side-bar">
               <div id='blog'>
                 <h3>Blog</h3>
                 <li>Winter persists, but Winter Bash 2019 has drawn to a close!</li>
@@ -60,7 +60,7 @@ class QuestionsIndex extends React.Component{
                 <li>Poor error handling source code review  </li>
 
               </div>
-            </div>
+            </div> */}
           </div>
 
           <footer>

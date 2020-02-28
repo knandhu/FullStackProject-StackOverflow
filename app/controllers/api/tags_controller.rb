@@ -4,5 +4,9 @@ class Api::TagsController < ApplicationController
         @tags= Tag.all
     end
 
+    # def show
+    #     @questions = Question.find_by()
+    # end
+
     
 end

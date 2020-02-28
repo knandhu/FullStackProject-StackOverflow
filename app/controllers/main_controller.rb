@@ -1,11 +1,7 @@
 class MainController < ApplicationController
      before_action :force_json, only: :search
 
-     def search
-
-      # @questions = Question.includes(:tags).ransack(title_cont: params[:q]).result(distinct:true) //untouched
-      # @questions =  Question.joins(:tags).ransack(tags_name_cont:params[:q]).result(distinct:true) #working for tags alone
-      
+     def search      
       @questions = Question.includes(:tags).ransack(title_cont: params[:q]).result(distinct:true)
       
       if @questions.length == 0
