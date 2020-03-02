@@ -12,5 +12,5 @@ const recieveTags = tags => ({
 // });
 
 export const receiveTags = () => dispatch => {
-    return (fetchTags()).then(tags =>dispatch(recieveTags(tags)));
+  return fetchTags().then(tags => dispatch(recieveTags(tags)));
 };
