@@ -159,7 +159,7 @@ export default class QuestionForm extends React.Component {
 
             <br />
             <button id="post-q" type="submit">
-              {this.props.formType}
+              Update Question
             </button>
           </form>
         </div>
