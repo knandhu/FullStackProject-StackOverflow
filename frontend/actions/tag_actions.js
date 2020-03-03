@@ -7,9 +7,9 @@ const recieveTags = tags => ({
   tags
 });
 
-// export const clearSearchTerm = () => ({
-//   type: CLEAR_SEARCH
-// });
+export const clearSearchTerm = () => ({
+  type: CLEAR_SEARCH
+});
 
 export const receiveTags = () => dispatch => {
   return fetchTags().then(tags => dispatch(recieveTags(tags)));
