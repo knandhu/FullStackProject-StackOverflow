@@ -838,7 +838,7 @@ body {
   position: relative;
   right: 35px;
   background-color: white;
-  min-height: 800px;
+  /* min-height: 800px; */
   height: auto;
 }
 #q-detail #main #content {
