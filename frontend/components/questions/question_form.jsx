@@ -147,14 +147,15 @@ export default class QuestionForm extends React.Component {
             />
 
             <br />
-            {
-              this.state.tag_names.map((tag, idx) => {
-                return (
-                  <ul key={idx}>
-                    <div>Tag {idx+1}: {tag}</div>
-                  </ul>
-                )
-              })}
+            {this.state.tag_names.map((tag, idx) => {
+              return (
+                <ul key={idx}>
+                  <div>
+                    Tag {idx + 1}: {tag}
+                  </div>
+                </ul>
+              );
+            })}
 
             <label htmlFor="">
               Tags

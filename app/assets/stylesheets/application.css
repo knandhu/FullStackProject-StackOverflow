@@ -112,8 +112,8 @@ body {
   }
 }
 @media (max-width: 90em) {
-#search-page #left-nav {
-  display: none;
+  #search-page #left-nav {
+    display: none;
   }
 }
 
@@ -126,7 +126,6 @@ body {
   /* padding-left: 200px; */
   justify-content: space-around;
 }
-
 
 #search-bar {
   display: flex;
@@ -260,12 +259,12 @@ body {
 #q-detail #main #content #answers .quill .ql-container .ql-editor {
   /* border-top: 1px solid #d6dadc; */
   position: relative;
-  right:50px;
+  right: 50px;
 }
 #q-detail #main #content #answers #owner {
   color: #0178cd;
   position: relative;
-  right:50px;
+  right: 50px;
   border-bottom: 1px solid #d6dadc;
 }
 #q-detail #main #content .quill .ql-container p {
@@ -281,7 +280,6 @@ body {
   border-color: #cfd2d5;
   /* box-sizing: inherit; */
 }
-
 
 #q-detail #main content #tags {
   list-style-type: none;
@@ -381,15 +379,13 @@ body {
   text-align: center;
 }
 #main-page #tag-page footer #home-footer {
-  position:relative;
-  top:390px;
-  
+  position: relative;
+  top: 390px;
 }
 
-
-#main-page #user-page footer #home-footer{
+#main-page #user-page footer #home-footer {
   position: relative;
-  top:300px;
+  top: 300px;
 }
 #home-footer,
 #q-detail #home-footer,
@@ -768,16 +764,16 @@ body {
   line-height: 2.2;
   padding-top: 55px;
   width: auto;
-  height:auto;
+  height: auto;
   max-width: 77.2307692rem !important;
   min-width: 75rem;
   margin: 0 auto;
 }
 
-#root #main-page #search-page #left-nav{
+#root #main-page #search-page #left-nav {
   position: fixed;
-  left:200px;
-  border:none;
+  left: 200px;
+  border: none;
 }
 
 #main-bar h2 {
@@ -792,7 +788,8 @@ body {
   justify-content: start;
 }
 
-#tag-page #main #tags, #user-page #main #user-details {
+#tag-page #main #tags,
+#user-page #main #user-details {
   /* min-width: 700px;
   min-height: 700px; */
   position: relative;
@@ -855,18 +852,18 @@ body {
   justify-content: flex-start;
 }
 
-#main-page #search-page #search-results{
-   /* border-left: 1px solid #d6d9dc; */
-   position: relative;
-   right:208px;
+#main-page #search-page #search-results {
+  /* border-left: 1px solid #d6d9dc; */
+  position: relative;
+  right: 208px;
 }
 
-#main-page #search-page #search-results #border{
-   border-left: 1px solid #d6d9dc;
-   min-height: 700px;
-   min-width: 500px;
-  position:relative;
-  left:100px;
+#main-page #search-page #search-results #border {
+  border-left: 1px solid #d6d9dc;
+  min-height: 700px;
+  min-width: 500px;
+  position: relative;
+  left: 100px;
 }
 
 .quill-editor {
@@ -1090,8 +1087,8 @@ textarea {
 
 #user-details {
   position: relative;
-  bottom:30px;
-  left:20px;
+  bottom: 30px;
+  left: 20px;
 }
 
 #main #left-nav,
@@ -1179,64 +1176,64 @@ textarea {
 }
 
 #q-box #add-tag {
-  position: relative;
+  /* position: relative;
   bottom: 30px;
-  left: 270px;
+  left: 270px; */
   border: 1px solid #577ee7;
   background: #577ee7;
   color: white;
   width: 60px;
   font-size: 13px;
+  margin-top: 4px;
 }
 
 input.searchbar:focus {
   outline-width: 0;
 }
 
-#public{
+#public {
   margin-left: 10px;
 }
 
-#globe{
+#globe {
   display: flex;
   flex-direction: row;
   position: relative;
-  right:16px;
+  right: 16px;
 }
-#globe #glbimg{
+#globe #glbimg {
   position: relative;
-  top:4px;
+  top: 4px;
 }
 
-
-#leftnav a, #search-page #left-nav #leftnav {
-  color: #535A60;
+#leftnav a,
+#search-page #left-nav #leftnav {
+  color: #535a60;
   /* z-index:1; */
 }
 
-
-#users{
+#users {
   position: relative;
-  right:300px;
-  top:25px;
-} 
+  right: 300px;
+  top: 25px;
+}
 
-#root #main-page main #tag-page #main #tags div, #users div{
+#root #main-page main #tag-page #main #tags div,
+#users div {
   border: 1px solid #d6dadc;
   padding: 20px;
   font-size: 20px;
   text-align: center;
 }
 
-#main #content ul h4{
+#main #content ul h4 {
   position: relative;
-  right:50px;
-  width:93%;
+  right: 50px;
+  width: 93%;
   border-bottom: 1px solid #d6dadc;
-
 }
-#main #content #aform{
+#main #content #aform {
   position: relative;
-  right:30px;
+  right: 30px;
   margin-bottom: 20px;
 }
