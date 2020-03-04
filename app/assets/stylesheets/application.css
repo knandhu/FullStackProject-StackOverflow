@@ -383,7 +383,9 @@ body {
 #main-page #tag-page footer #home-footer {
   position:relative;
   top:390px;
+  
 }
+
 
 #main-page #user-page footer #home-footer{
   position: relative;
@@ -394,6 +396,7 @@ body {
 #qcreate footer #home-footer,
 #main-page #home-footer {
   margin: 0 auto;
+  /* margin-top: 20px; */
   height: 232px;
   padding: 32px 12px 12px;
   display: flex;
@@ -1219,7 +1222,6 @@ input.searchbar:focus {
 } 
 
 #root #main-page main #tag-page #main #tags div, #users div{
-
   border: 1px solid #d6dadc;
   padding: 20px;
   font-size: 20px;
@@ -1227,16 +1229,14 @@ input.searchbar:focus {
 }
 
 #main #content ul h4{
-  /* background-color: black; */
-
   position: relative;
   right:50px;
   width:93%;
-  /* border-top: 1px solid #d6dadc; */
   border-bottom: 1px solid #d6dadc;
 
 }
 #main #content #aform{
   position: relative;
   right:30px;
+  margin-bottom: 20px;
 }
