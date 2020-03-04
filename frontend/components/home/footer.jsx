@@ -43,15 +43,21 @@ class Footer extends React.Component {
           <div id="links">
             <div id="social">
               <li>
-                <a href="https://angel.co/jobs">AngelList</a>
+                <a target="_blank" href="https://angel.co/jobs">
+                  AngelList
+                </a>
               </li>
               <br />
               <li>
-                <a href="https://github.com/knandhu">GitHub</a>
+                <a target="_blank" href="https://github.com/knandhu">
+                  GitHub
+                </a>
               </li>
               <br />
               <li>
-                <a href="https://www.linkedin.com/feed/">LinkedIn</a>
+                <a target="_blank" href="https://www.linkedin.com/feed/">
+                  LinkedIn
+                </a>
               </li>
             </div>
             <div id="copy-rights">
