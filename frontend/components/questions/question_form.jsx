@@ -60,11 +60,11 @@ export default class QuestionForm extends React.Component {
       : this.state.tag_names;
 
     const lastele =
-      this.props.formType == "Edit"
+      this.props.formType == "Update Question"
         ? this.state.tag_names.slice(this.state.tags.length)
         : null;
     tags =
-      this.props.formType == "Edit"
+      this.props.formType == "Update Question"
         ? [...this.state.tags.map((tag, idx) => tag.name), ...lastele]
         : tags;
 
@@ -86,7 +86,7 @@ export default class QuestionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.formType == "Edit"
+    this.props.formType == "Update Question"
       ? this.props
           .action(this.state)
           .then(() =>
@@ -109,7 +109,11 @@ export default class QuestionForm extends React.Component {
     return (
       <div id="qcreate">
         <div id="qform">
-          {this.props.formType === "Edit" ? "" : <h3>Ask a public question</h3>}
+          {this.props.formType === "Update Question" ? (
+            ""
+          ) : (
+            <h3>Ask a public question</h3>
+          )}
           {this.renderErrors()}
           <form id="q-box" onSubmit={this.handleSubmit}>
             <label htmlFor="">
@@ -145,7 +149,6 @@ export default class QuestionForm extends React.Component {
             <br />
             {this.state.tag_names.map((tag, idx) => (
               <ul key={idx}>
-                {/* <li>Tags {idx}</li> */}
                 <div>{tag}</div>
               </ul>
             ))}
