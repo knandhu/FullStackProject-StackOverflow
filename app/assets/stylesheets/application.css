@@ -1225,3 +1225,18 @@ input.searchbar:focus {
   font-size: 20px;
   text-align: center;
 }
+
+#main #content ul h4{
+  /* background-color: black; */
+
+  position: relative;
+  right:50px;
+  width:93%;
+  /* border-top: 1px solid #d6dadc; */
+  border-bottom: 1px solid #d6dadc;
+
+}
+#main #content #aform{
+  position: relative;
+  right:30px;
+}
