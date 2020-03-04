@@ -67,6 +67,7 @@ class AnswerForm extends React.Component {
     const { response } = this.state.response;
     return (
       <div id="aform">
+        <br />
         <form id="a-box" onSubmit={this.handleSubmit}>
           <h4>Your Answer</h4>
           <br />
@@ -81,6 +82,7 @@ class AnswerForm extends React.Component {
           <button id="post-a" type="submit">
             Post Your Answer
           </button>
+          <br />
         </form>
       </div>
     );

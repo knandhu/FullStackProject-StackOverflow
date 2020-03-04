@@ -258,12 +258,15 @@ body {
   font-size: 20px;
 }
 #q-detail #main #content #answers .quill .ql-container .ql-editor {
-  border-top: 1px solid #d6dadc;
+  /* border-top: 1px solid #d6dadc; */
   position: relative;
   right:50px;
 }
 #q-detail #main #content #answers #owner {
   color: #0178cd;
+  position: relative;
+  right:50px;
+  border-bottom: 1px solid #d6dadc;
 }
 #q-detail #main #content .quill .ql-container p {
   font-size: 15px;

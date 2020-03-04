@@ -44,7 +44,6 @@ export default class QuestionForm extends React.Component {
     this.updateBody = this.updateBody.bind(this);
   }
 
-
   update(field) {
     return e => this.setState({ [field]: e.target.value });
   }
@@ -58,17 +57,21 @@ export default class QuestionForm extends React.Component {
   addTag() {
     let tags = this.state.tags
       ? this.state.tags.map((tag, idx) => tag.name)
-      : this.state.tag_names; 
-    
-    const lastele = this.props.formType == 'Edit' ?
-      this.state.tag_names.slice(this.state.tags.length):null;
-     tags = this.props.formType == 'Edit' ?
-      [...this.state.tags.map((tag, idx) => tag.name), ...lastele] : tags;  
+      : this.state.tag_names;
+
+    const lastele =
+      this.props.formType == "Edit"
+        ? this.state.tag_names.slice(this.state.tags.length)
+        : null;
+    tags =
+      this.props.formType == "Edit"
+        ? [...this.state.tags.map((tag, idx) => tag.name), ...lastele]
+        : tags;
 
     this.setState({
       tag_names: [...tags, this.state.new_tag],
       new_tag: ""
-    }) 
+    });
   }
 
   renderErrors() {
@@ -140,11 +143,13 @@ export default class QuestionForm extends React.Component {
             />
 
             <br />
-            {this.state.tag_names.map((tag,idx) =>
+            {this.state.tag_names.map((tag, idx) => (
               <ul key={idx}>
+                {/* <li>Tags {idx}</li> */}
                 <div>{tag}</div>
-              </ul>)}
-            
+              </ul>
+            ))}
+
             <label htmlFor="">
               Tags
               <p>Add up to 5 tags to describe what your question is about</p>
@@ -152,14 +157,16 @@ export default class QuestionForm extends React.Component {
                 type="text"
                 id="question-fields"
                 value={this.state.new_tag}
-                onChange={this.update("new_tag")}                 
+                onChange={this.update("new_tag")}
               />
-                <button id='add-tag' type='button' onClick={this.addTag}>Add Tag</button>
+              <button id="add-tag" type="button" onClick={this.addTag}>
+                Add Tag
+              </button>
             </label>
 
             <br />
             <button id="post-q" type="submit">
-              Update Question
+              {this.props.formType}
             </button>
           </form>
         </div>

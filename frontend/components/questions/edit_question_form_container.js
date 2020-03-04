@@ -18,7 +18,7 @@ const mapStateToProps = ({ errors, session, entities: { users,questions } },ownP
         quesId: ownProps.match.params.questionId,
         currentUser: users[session.id],
         errors: errors.question,
-        formType: 'Edit'
+        formType: 'Update Question'
     })
 };
 
