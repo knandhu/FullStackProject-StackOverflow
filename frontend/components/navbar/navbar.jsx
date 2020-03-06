@@ -4,7 +4,7 @@ import { Route, Redirect, Switch, Link, HashRouter, withRouter } from "react-rou
 import QuestionsContainer from "./../questions/questions_container";
 import { searchQuestions } from './../../util/search_questions_api_util';
 import SearchBarContainer from './../questions/search_bar_container';
-import SearchPage from "../questions/search_page";
+// import SearchPage from "../questions/search_page";
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
