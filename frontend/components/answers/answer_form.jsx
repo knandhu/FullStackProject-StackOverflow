@@ -70,7 +70,7 @@ class AnswerForm extends React.Component {
         <br />
         <form id="a-box" onSubmit={this.handleSubmit}>
           <h4>Your Answer</h4>
-          {/* <br /> */}
+          <br />
           <ReactQuill
             theme="snow"
             modules={this.modules}
