@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Route, Redirect, Switch, Link, HashRouter, withRouter } from "react-router-dom";
+import { Route, Switch, Link, HashRouter, withRouter } from "react-router-dom";
 // import QuestionsContainer from "./../questions/questions_container";
 // import { searchQuestions } from './../../util/search_questions_api_util';
 // import SearchBarContainer from './../questions/search_bar_container';
