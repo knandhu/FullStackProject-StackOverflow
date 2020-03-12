@@ -35,8 +35,7 @@ class Home extends React.Component{
               <br />
               <div id="divider"></div>
               <span>
-                Ask a question publicly on 170+ Stack Exchange sites or
-                privately using Get Answers for Teams.
+                Ask a question publicly on 170+ Get Answers site
               </span>
               <br />
               <h2>Learn and grow with Get Answers</h2>
