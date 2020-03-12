@@ -12,7 +12,8 @@ class MainController < ApplicationController
      end
 
      def tag_search
-         @questions = Question.includes(:tags).where('tags.name = ?', 'second').references(:Tag)
+         # @questions = Question.includes(:tags).where('tags.name = ?', 'second').references(:Tag)
+         @questions = Question.includes(:tags).where(tags: {name: params[:q]})
          @questions
      end
 

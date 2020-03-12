@@ -20,6 +20,13 @@ export const fetchQuestion = (questionId) => (
     })  
 );
 
+export const fetchTagQuestions = (tag) => (
+    $.ajax({
+        url: `/api/questions/${tag}`,
+        method: 'GET'
+    })
+);
+
 export const updateQuestion = (question) => (  
     $.ajax({
         url: `/api/questions/${question.id}`,

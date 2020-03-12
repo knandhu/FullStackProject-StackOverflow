@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchQuestions } from './../../actions/question_actions';
+import { fetchQuestions, fetchTagQuestions } from './../../actions/question_actions';
 import QuestionsIndex from './questions_index';
 const mapStateToProps = state => {
     return ({
@@ -9,7 +9,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchQuestions: () => dispatch(fetchQuestions())
+    fetchQuestions: () => dispatch(fetchQuestions()),
+    fetchTagQuestions: (tag) => dispatch(fetchTagQuestions(tag))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuestionsIndex);

@@ -47,6 +47,14 @@ export const fetchQuestions = () => dispatch => {
     ))
 
 };
+
+export const fetchTagQuestions = (tag) => dispatch => {
+    return (
+        QuestionAPIUtil.fetchTagQuestions(tag).then((questions) => {
+            console.log(questions)
+        })
+    )
+};
   
 
 export const fetchQuestion = (questionId) => dispatch => {
