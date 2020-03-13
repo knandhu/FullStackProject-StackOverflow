@@ -15,7 +15,8 @@ import ReactQuill from "react-quill";
 class QuestionDetailForm extends React.Component{
     constructor(props) {
         super(props);
-        this.deleteQuestion = this.deleteQuestion.bind(this);
+      this.deleteQuestion = this.deleteQuestion.bind(this);
+      this.tag_search = this.tag_search.bind(this);
       this.state = this.props.answer;
       this.props.fetchQuestion(this.props.answer.question_id);
     }
@@ -23,6 +24,12 @@ class QuestionDetailForm extends React.Component{
         this.props
           .fetchQuestion(this.props.answer.question_id)
     }
+  
+  tag_search(name) {
+    // console.log(name); 
+    // this.props.tag_search;
+    this.props.history.push(`tag_search/q=${name}`);
+  }
     deleteQuestion() {
         this.props.deleteQuestion(this.props.question)
             .then(() => this.props.history.push('/questions'))
@@ -54,8 +61,10 @@ class QuestionDetailForm extends React.Component{
                   {this.props.question.tags ? (
                     <ul id="tags">
                       {this.props.question.tags.map((tag, idx) => (
-                        <li key={idx}>{tag.name}</li>
-                      ))}
+                        <li key={idx}
+                          onClick={() => this.tag_search(tag.name)}
+                        >{tag.name}</li>
+                    ))}
                     </ul>
                   ) : null}
                   {this.props.question.owner_id ===

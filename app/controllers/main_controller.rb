@@ -1,5 +1,6 @@
 class MainController < ApplicationController
      before_action :force_json, only: :search
+     before_action :force_json, only: :tag_search
 
      def search      
       @questions = Question.includes(:tags).ransack(title_cont: params[:q]).result(distinct:true)
@@ -12,7 +13,6 @@ class MainController < ApplicationController
      end
 
      def tag_search
-         # @questions = Question.includes(:tags).where('tags.name = ?', 'second').references(:Tag)
          @questions = Question.includes(:tags).where(tags: {name: params[:q]})
          @questions
      end

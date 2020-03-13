@@ -20,6 +20,7 @@ import QuestionDetailContainer from "./questions/question_detail_container";
 import CreateAnswerFormContainer from "./answers/create_answer_form_container";
 import SearchPage from "./questions/search_page";
 import SearchBarContainer from "./questions/search_bar_container";
+import TagSearchContainer from "./questions/tag_search_container";
 import TagsContainer from "./tags/tags_container";
 import UsersContainer from "./users/users_container";
 import NotFound from "./not_found";
@@ -46,6 +47,8 @@ const App = () => (
           component={QuestionsContainer}
         />
         <Route path="/search/q=:searchTerm" component={SearchBarContainer} />
+        <Route path="/tag_search/q=:tagName" component={TagSearchContainer} />
+        <Route path="/questions/tag_search/q=:tagName" component={TagSearchContainer} />
         <ProtectedRoute
           exact
           path="/questions/ask"

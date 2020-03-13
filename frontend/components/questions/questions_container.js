@@ -9,8 +9,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchQuestions: () => dispatch(fetchQuestions()),
-    fetchTagQuestions: (tag) => dispatch(fetchTagQuestions(tag))
+    fetchQuestions: () => dispatch(fetchQuestions())
+    // fetchTagQuestions: (tag) => dispatch(fetchTagQuestions(tag))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuestionsIndex);

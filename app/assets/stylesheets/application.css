@@ -378,9 +378,9 @@ body {
 #home-page #text h2 {
   text-align: center;
 }
-#main-page #tag-page footer #home-footer {
+#main-page footer #home-footer {
   position: relative;
-  top: 390px;
+  top: 400px;
 }
 
 #main-page #user-page footer #home-footer {
@@ -846,24 +846,10 @@ body {
 }
 
 #main-page #search-page #search-results #page-item #tags {
-  width: 120px;
+  width: 50px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-}
-
-#main-page #search-page #search-results {
-  /* border-left: 1px solid #d6d9dc; */
-  position: relative;
-  right: 208px;
-}
-
-#main-page #search-page #search-results #border {
-  border-left: 1px solid #d6d9dc;
-  min-height: 700px;
-  min-width: 500px;
-  position: relative;
-  left: 100px;
 }
 
 .quill-editor {
@@ -901,11 +887,10 @@ body {
   padding-top: 25px;
 }
 
-#search-page ul h3 {
+/* #search-page ul h3 {
   padding-left: 70px;
-}
-#main #q-index ul,
-#root #main-page #search-page ul li {
+} */
+#main #q-index ul {
   /* justify-content: flex-start; */
   /* position: relative;
    left: 40%; */
@@ -1062,6 +1047,7 @@ textarea {
 #q-index #tags #button,
 #q-detail #tags li,
 #search-results li #tags #button {
+  width: fit-content;
   background-color: #cedfed;
   color: #32658a;
   padding: 3px 5px;
@@ -1092,6 +1078,7 @@ textarea {
 }
 
 #main #left-nav,
+#main-page main #tag-page #left-nav,
 #q-detail #left-nav,
 #main-page header,
 #root #main-page main div #search-page #left-nav {
@@ -1236,4 +1223,22 @@ input.searchbar:focus {
   position: relative;
   right: 30px;
   margin-bottom: 20px;
+}
+#tag-page {
+  position: relative;
+  top: 70px;
+}
+#tag-page ul {
+  list-style: none;
+}
+
+#tag-page #border {
+  position: relative;
+  left: 50px;
+}
+
+#root #main-page #search-page ul li {
+  position: relative;
+  /* left:20px; */
+  list-style: none;
 }

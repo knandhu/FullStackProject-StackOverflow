@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,withRouter } from "react-router-dom";
 
 // const QuestionIndexItem = props => {
 //   return (
@@ -26,10 +26,16 @@ import { Link } from "react-router-dom";
 class QuestionIndexItem extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      tag_name:''
+    }
+    this.tag_search = this.tag_search.bind(this);
   }
 
   tag_search(name) {
-    this.props.fetchTagQuestions(name);
+    // console.log(name); 
+    // this.props.tag_search;
+    this.props.history.push(`tag_search/q=${name}`);
   }
 
   render() {
@@ -60,7 +66,7 @@ class QuestionIndexItem extends React.Component {
     );
   }
 }
-export default QuestionIndexItem;
+export default withRouter(QuestionIndexItem);
 
 // const tag_search = (obj) => {
 //   console.log(obj.value);
