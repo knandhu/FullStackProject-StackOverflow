@@ -26,9 +26,6 @@ export default class TagQuestions extends React.Component {
     return (
       <div>
         <div id="tag-page">
-          {/* <div id="left-nav">
-            <LeftNavigationBar />
-          </div> */}
           <ul id="search-results">
             <div id="border">
               <h3>Questions with Tag: {this.props.tagName}</h3>
