@@ -1,6 +1,6 @@
 import React from "react";
 import TagPageItem from "./../questions/tag_page_item";
-import LeftNavigationBar from "./../navbar/left_navigation_form";
+// import LeftNavigationBar from "./../navbar/left_navigation_form";
 import Footer from "./../home/footer";
 
 export default class TagQuestions extends React.Component {
