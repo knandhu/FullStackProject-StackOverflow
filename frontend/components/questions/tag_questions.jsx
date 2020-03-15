@@ -28,7 +28,7 @@ export default class TagQuestions extends React.Component {
         <div id="tag-page">
           <ul id="search-results">
             <div id="border">
-              <h3>Questions with Tag: {this.props.tagName}</h3>
+              <h3>List of Questions with Tag: {this.props.tagName}</h3>
               <br />
               {this.props.tagresults.length != 0 ? (
                 this.props.tagresults.map((ques, idx) => (
