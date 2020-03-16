@@ -380,7 +380,7 @@ body {
 }
 #main-page footer #home-footer {
   position: relative;
-  top: 400px;
+  /* top: 400px; */
 }
 
 #main-page #user-page footer #home-footer {
