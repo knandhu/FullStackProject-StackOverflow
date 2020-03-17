@@ -378,6 +378,10 @@ body {
 #home-page #text h2 {
   text-align: center;
 }
+
+#main-page main #tag-page{
+  min-height: 600px;
+}
 #main-page footer #home-footer {
   position: relative;
   /* top: 400px; */
@@ -755,14 +759,26 @@ body {
 /* Q Index Page*/
 #main,
 #q-detail #main,
-#root #main-page #search-page,
-#root #main-page main #tag-page #main {
+#root #main-page #search-page {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   list-style-type: none;
   line-height: 2.2;
   padding-top: 55px;
+  width: auto;
+  height: auto;
+  max-width: 77.2307692rem !important;
+  min-width: 75rem;
+  margin: 0 auto;
+}
+#root #main-page main #tag-page #main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  line-height: 2.2;
+  /* padding-top: 55px; */
   width: auto;
   height: auto;
   max-width: 77.2307692rem !important;
@@ -813,6 +829,7 @@ body {
   /* box-sizing: border-box; */
 }
 #root #main-page #search-page {
+  /* background-color: red; */
   position: relative;
   top: 50px;
   display: flex;
@@ -824,6 +841,13 @@ body {
   min-height: 750px;
   padding-top: 0;
   margin: 0 auto;
+}
+
+#root #main-page #search-page #search-results{
+  position: relative;
+  /* background-color: green; */
+  min-width: 800px;
+  left:20px;
 }
 
 /* #main-page #search-page ul{
