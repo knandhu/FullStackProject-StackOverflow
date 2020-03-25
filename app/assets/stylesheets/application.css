@@ -546,6 +546,7 @@ body {
   color: white;
   font-size: 15px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .login-form #img {
@@ -685,6 +686,7 @@ body {
   background-color: rgb(63, 162, 223);
   color: white;
   font-size: 13px;
+  cursor: pointer;
 }
 .signup-box label {
   font-display: inherit;
@@ -754,6 +756,7 @@ body {
   color: white;
   font-size: 15px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* Q Index Page*/
