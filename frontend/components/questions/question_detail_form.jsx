@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LeftNavigationBar from './../navbar/left_navigation_form';
 import Footer from './../home/footer';
-import QuestionForm from './question_form';
+// import QuestionForm from './question_form';
 import AnswerForm from './../answers/answer_form';
 import AnswerContainer from '../answers/answer_container';
 import CreateAnswerFormContainer from './../answers/create_answer_form_container';
