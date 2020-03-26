@@ -36,7 +36,7 @@ class DemoForm extends React.Component {
     const totalDemoTime = demoEmailTime + demoPasswordTime + buffer;
     this.demoEmail(email, intervalSpeed);
     setTimeout(() => this.demoPassword(password, intervalSpeed), demoEmailTime);
-    setTimeout(() => this.props.login(user), totalDemoTime + 100);
+    // setTimeout(() => this.props.login(user), totalDemoTime + 100);
   }
   demoEmail(email, intervalSpeed) {
     let i = 0;
