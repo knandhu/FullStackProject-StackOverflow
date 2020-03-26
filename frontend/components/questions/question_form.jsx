@@ -39,6 +39,7 @@ export default class QuestionForm extends React.Component {
     ];
 
     this.state = this.props.question;
+    this.state.error = '';
     this.handleSubmit = this.handleSubmit.bind(this);
     this.addTag = this.addTag.bind(this);
     this.updateBody = this.updateBody.bind(this);
@@ -67,11 +68,15 @@ export default class QuestionForm extends React.Component {
       this.props.formType == "Update Question"
         ? [...this.state.tags.map((tag, idx) => tag.name), ...lastele]
         : tags;
-
-    this.setState({
-      tag_names: [...tags, this.state.new_tag],
-      new_tag: ""
-    });
+    this.state.new_tag && tags.length < 5
+      ? this.setState({
+        tag_names: [...tags, this.state.new_tag],
+        new_tag: "",
+        error:''
+      })
+      : this.setState({
+        error: "Enter a valid tag name/tag limit exceeded"
+      })
   }
 
   renderErrors() {
@@ -80,6 +85,7 @@ export default class QuestionForm extends React.Component {
         {this.props.errors.map((error, i) => (
           <li key={i}>{error}</li>
         ))}
+        <p style={{ color: "red" }}>{this.state.error}</p>
       </ul>
     );
   }

@@ -49,11 +49,11 @@ const App = () => (
         <Route path="/search/q=:searchTerm" component={SearchBarContainer} />
         <Route path="/tag_search/q=:tagName" component={TagSearchContainer} />
         <Route path="/questions/tag_search/q=:tagName" component={TagSearchContainer} />
-        <ProtectedRoute
+          <ProtectedRoute
           exact
           path="/questions/ask"
           component={CreateQuestionFormContainer}
-        />
+          />
         <ProtectedRoute
           exact
           path="/questions/:questionId"
