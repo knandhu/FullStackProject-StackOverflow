@@ -50,7 +50,6 @@ class QuestionDetailForm extends React.Component{
                       <Link to="/questions/ask">Ask Question</Link>
                     </nav>
                   </div>
-                  {/* <p>Body:</p> */}
                   <ReactQuill
                     value={this.props.question.body}
                     modules={{
