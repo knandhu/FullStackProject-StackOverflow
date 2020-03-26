@@ -69,8 +69,8 @@ class AnswerForm extends React.Component {
       <div id="aform">
         <br />
         <form id="a-box" onSubmit={this.handleSubmit}>
-          <h4>Your Answer</h4>
-          <br />
+          <h4>Your Answer:</h4>
+          {/* <br /> */}
           <ReactQuill
             theme="snow"
             modules={this.modules}

@@ -80,7 +80,7 @@ class QuestionDetailForm extends React.Component{
                       </button>
                       </div>
                     ) : null}
-
+                  <br />
                   {this.props.question.answers ? (
                     <ul>
                       <h4>{this.props.question.answers.length} Answers</h4>
