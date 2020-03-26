@@ -59,21 +59,21 @@ export default class QuestionForm extends React.Component {
     let tags = this.state.tags
       ? this.state.tags.map((tag, idx) => tag.name)
       : this.state.tag_names;
-    
-     const lastele =
-       this.props.formType == "Update Question"
-         ? this.state.tag_names.slice(this.state.tags.length)
-         : null;
-     tags =
-       this.props.formType == "Update Question"
-         ? [...this.state.tags.map((tag, idx) => tag.name), ...lastele]
-         : tags;
-    
+
+    const lastele =
+      this.props.formType == "Update Question"
+        ? this.state.tag_names.slice(this.state.tags.length)
+        : null;
+    tags =
+      this.props.formType == "Update Question"
+        ? [...this.state.tags.map((tag, idx) => tag.name), ...lastele]
+        : tags;
+
     return tags
       ? tags.map((tag, idx) => {
           return (
             <ul key={idx}>
-              <div>
+              <div style={{ color: "#A9A9A9" }}>
                 Added Tag {idx + 1}: {tag}
               </div>
             </ul>
@@ -91,6 +91,7 @@ export default class QuestionForm extends React.Component {
       this.props.formType == "Update Question"
         ? this.state.tag_names.slice(this.state.tags.length)
         : null;
+
     tags =
       this.props.formType == "Update Question"
         ? [...this.state.tags.map((tag, idx) => tag.name), ...lastele]
