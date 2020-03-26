@@ -44,6 +44,7 @@ class DemoForm extends React.Component {
                     type="password"
                     className="demo-input"
                     value={this.state.password}
+                    autoComplete="current-password"
                     onChange={this.update("password")}
                   />
                 </label>

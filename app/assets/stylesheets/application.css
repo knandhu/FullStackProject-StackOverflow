@@ -380,23 +380,23 @@ body {
 }
 
 #main-page main #tag-page{
-  min-height: 600px;
+  min-height: 701px;
 }
-#main-page footer #home-footer {
+#main-page #tag-page footer #home-footer {
   position: relative;
-  /* top: 400px; */
+  top: 200px;
 }
 
 #main-page #user-page footer #home-footer {
   position: relative;
-  top: 300px;
+  top: 400px;
 }
 #home-footer,
 #q-detail #home-footer,
 #qcreate footer #home-footer,
 #main-page #home-footer {
   margin: 0 auto;
-  /* margin-top: 20px; */
+  /* margin-top: 50px; */
   height: 232px;
   padding: 32px 12px 12px;
   display: flex;
@@ -760,7 +760,7 @@ body {
 }
 
 /* Q Index Page*/
-#main,
+/* #main, */
 #q-detail #main,
 #root #main-page #search-page {
   display: flex;
@@ -775,13 +775,13 @@ body {
   min-width: 75rem;
   margin: 0 auto;
 }
-#root #main-page main #tag-page #main{
+#main,#root #main-page main #tag-page #main{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   list-style-type: none;
   line-height: 2.2;
-  /* padding-top: 55px; */
+  padding-top: 55px;
   width: auto;
   height: auto;
   max-width: 77.2307692rem !important;
@@ -813,12 +813,19 @@ body {
   min-height: 700px; */
   position: relative;
   top: 40px;
-  right: 290px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 150px 150px 150px 150px 150px 150px;
   padding: 10px;
   /* flex-direction: column; */
   /* background-color: blue; */
+}
+
+#user-page #main #user-details {
+  position: relative;
+  top: 40px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  padding: 20px;
 }
 
 #main #q-index {
@@ -865,7 +872,7 @@ body {
   position: relative;
   right: 35px;
   background-color: white;
-  /* min-height: 800px; */
+  /* min-height: 1000px; */
   height: auto;
 }
 #q-detail #main #content {
@@ -1071,6 +1078,18 @@ textarea {
   width: 20%;
 }
 
+#root #main-page main #tag-page #main #tags div{
+  width: fit-content;
+  background-color: #cedfed;
+  color: #32658a;
+  padding: 3px 5px;
+  text-align: center;
+  cursor: pointer;
+  margin: 6px 2px;
+  border-radius: 4px;
+  font-size: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 #q-index #tags #button,
 #q-detail #tags li,
 #search-results li #tags #button {
@@ -1199,6 +1218,7 @@ textarea {
   width: 60px;
   font-size: 13px;
   margin-top: 4px;
+  cursor: pointer;
 }
 
 input.searchbar:focus {
@@ -1231,11 +1251,16 @@ input.searchbar:focus {
   right: 300px;
   top: 25px;
 }
-
-#root #main-page main #tag-page #main #tags div,
 #users div {
   border: 1px solid #d6dadc;
-  padding: 20px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#root #main-page main #tag-page #main #tags div {
+  border: 1px solid #d6dadc;
+  /* padding: 20px; */
   font-size: 20px;
   text-align: center;
 }
