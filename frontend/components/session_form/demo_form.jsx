@@ -25,7 +25,7 @@ class DemoForm extends React.Component {
       this.props
         .processForm(user)
         .then(() => this.props.history.push("/questions"));
-    }, 2000);
+    }, 2500);
   }
 
   demo(user) {
