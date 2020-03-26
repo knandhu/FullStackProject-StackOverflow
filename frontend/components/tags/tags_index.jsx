@@ -28,7 +28,7 @@ class TagsIndex extends React.Component{
               
                   {this.props.tags.map((tag, idx) => (
                     // <li key={idx}>
-                      <TagIndexItem tag={tag} />
+                    <TagIndexItem key={idx} tag={tag} />
                    
                   ))}
              

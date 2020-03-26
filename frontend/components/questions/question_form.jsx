@@ -39,7 +39,7 @@ export default class QuestionForm extends React.Component {
     ];
 
     this.state = this.props.question;
-    this.state.error = '';
+    this.state.error = "";
     this.handleSubmit = this.handleSubmit.bind(this);
     this.addTag = this.addTag.bind(this);
     this.updateBody = this.updateBody.bind(this);
@@ -53,6 +53,23 @@ export default class QuestionForm extends React.Component {
     this.setState({
       body: value
     });
+  }
+
+  display_tags() {
+    let tags = this.state.tags
+      ? this.state.tags.map((tag, idx) => tag.name)
+      : this.state.tag_names;
+    return tags
+      ? tags.map((tag, idx) => {
+          return (
+            <ul key={idx}>
+              <div>
+                Added Tag {idx + 1}: {tag}
+              </div>
+            </ul>
+          );
+        })
+      : null;
   }
 
   addTag() {
@@ -70,13 +87,13 @@ export default class QuestionForm extends React.Component {
         : tags;
     this.state.new_tag && tags.length < 5
       ? this.setState({
-        tag_names: [...tags, this.state.new_tag],
-        new_tag: "",
-        error:''
-      })
+          tag_names: [...tags, this.state.new_tag],
+          new_tag: "",
+          error: ""
+        })
       : this.setState({
-        error: "Enter a valid tag name/tag limit exceeded"
-      })
+          error: "Enter a valid tag name/tag limit exceeded"
+        });
   }
 
   renderErrors() {
@@ -116,7 +133,7 @@ export default class QuestionForm extends React.Component {
       <div id="qcreate">
         <div id="qform">
           {this.props.formType === "Update Question" ? (
-            ""
+            <h3>Question update form</h3>
           ) : (
             <h3>Ask a public question</h3>
           )}
@@ -135,7 +152,6 @@ export default class QuestionForm extends React.Component {
                 onChange={this.update("title")}
               />
             </label>
-
             <br />
             <label>
               Body
@@ -151,17 +167,10 @@ export default class QuestionForm extends React.Component {
               onChange={this.updateBody}
               value={this.state.body}
             />
-
             <br />
-            {this.state.tag_names.map((tag, idx) => {
-              return (
-                <ul key={idx}>
-                  <div>
-                    Tag {idx + 1}: {tag}
-                  </div>
-                </ul>
-              );
-            })}
+
+            {this.display_tags()}
+            <br />
 
             <label htmlFor="">
               Tags
@@ -176,7 +185,6 @@ export default class QuestionForm extends React.Component {
                 Add Tag
               </button>
             </label>
-
             <br />
             <button id="post-q" type="submit">
               {this.props.formType}
