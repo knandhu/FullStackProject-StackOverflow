@@ -779,7 +779,7 @@ body {
 #root #main-page main #tag-page #main {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   list-style-type: none;
   line-height: 2.2;
   padding-top: 55px;
