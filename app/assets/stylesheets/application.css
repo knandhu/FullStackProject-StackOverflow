@@ -808,17 +808,16 @@ body {
   justify-content: start;
 }
 
+#tag-page #main #tags{
+  height:400px;
+}
 #tag-page #main #tags,
 #user-page #main #user-details {
-  /* min-width: 700px;
-  min-height: 700px; */
   position: relative;
   top: 40px;
   display: grid;
   grid-template-columns: 150px 150px 150px 150px 150px 150px;
   padding: 10px;
-  /* flex-direction: column; */
-  /* background-color: blue; */
 }
 
 #user-page #main #user-details {
@@ -881,7 +880,7 @@ body {
 }
 
 #main-page #search-page #search-results #page-item #tags {
-  width: 50px;
+  /* width: 50px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1081,6 +1080,7 @@ textarea {
 
 #root #main-page main #tag-page #main #tags div {
   width: fit-content;
+  height: fit-content;
   background-color: #cedfed;
   color: #32658a;
   padding: 3px 5px;
@@ -1288,6 +1288,7 @@ input.searchbar:focus {
 #tag-page #border {
   position: relative;
   left: 250px;
+  top:70px;
 }
 
 #root #main-page #search-page ul li {
