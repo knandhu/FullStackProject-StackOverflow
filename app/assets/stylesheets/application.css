@@ -763,8 +763,7 @@ body {
 /* #main, */
 #q-detail #main,
 #root #main-page #search-page,
-#tag-page #search-results
-{
+#tag-page #search-results {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -792,11 +791,11 @@ body {
   margin: 0 auto;
 }
 
-#root #main-page #search-page #left-nav {
-  position: fixed;
+/* #root #main-page #search-page #left-nav { */
+  /* position: fixed;
   left: 200px;
-  border: none;
-}
+  border: none; */
+/* } */
 
 #main-bar h2 {
   text-align: left;
@@ -810,8 +809,8 @@ body {
   justify-content: start;
 }
 
-#tag-page #main #tags{
-  height:400px;
+#tag-page #main #tags {
+  height: 400px;
 }
 #tag-page #main #tags,
 #user-page #main #user-details {
@@ -840,7 +839,7 @@ body {
   /* max-width:1050px; */
   /* box-sizing: border-box; */
 }
- #root #main-page #search-page {
+#root #main-page #search-page {
   position: relative;
   top: 50px;
   display: flex;
@@ -851,7 +850,7 @@ body {
   min-height: 750px;
   padding-top: 0;
   /* margin: 0 auto; */
-} 
+}
 
 #root #main-page #search-page #search-results {
   position: relative;
@@ -937,20 +936,15 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
   color: #0063bd;
-
-  /* flex-shrink: 0; */
-  /* overflow: hidden;    */
-  /* max-width:650px; */
 }
-#root #main-page #search-page li{
+#root #main-page #search-page li {
   padding-left: 5px;
   word-wrap: break-word;
-  color: #646A70;
+  color: #646a70;
   font-size: 16px;
   font-family: Arial;
 }
-#main #q-index li
- {
+#main #q-index li {
   padding-left: 50px;
   word-wrap: break-word;
   color: #308cd4;
@@ -1284,8 +1278,8 @@ input.searchbar:focus {
   right: 30px;
   margin-bottom: 20px;
 }
-#tag-page #search-results #leftnav{
-  width:250px;
+#tag-page #search-results #leftnav {
+  width: 250px;
 }
 
 /* #tag-page  {
