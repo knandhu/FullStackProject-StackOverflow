@@ -18,7 +18,7 @@ Question.create!(
     associate the command with the desired procedure. This works fine with standalone 
     procedures but I get variable required errors when trying to add object methods to 
     my stringlist. Here's example code:",
-    owner_id:7
+    owner_id:8
 )
 
 Question.create!(
@@ -33,14 +33,14 @@ Question.create!(
 I realize and understand why this isn't valid JSX, 
 since JSX maps to function calls. However, coming from template land and being new to JSX, I am unsure how 
 I would achieve the above (adding a component multiple times).",
-    owner_id:7
+    owner_id:2
 )
 
 Question.create!(
     title:"Executing Excel Workbook via Shortcuts or from the Directory is Causing Problems in Office 365",
     body:"I want to convert Strings to Enums for a set of enum types. 
     I use an interface to mark what set of enums to convert and define a couple of methods used during conversion:",
-    owner_id:7,
+    owner_id:2,
     tag_names:['first','second']
 )
 
@@ -57,7 +57,7 @@ Question.create!(
     ArrayList<Product> products = new ArrayList<Product>();
     public Float total;
 }",
-    owner_id:7
+    owner_id:2
 )
 
 Question.create!(
@@ -67,13 +67,13 @@ Question.create!(
 How can I achieve this in .net core. I am not able to find System.Drawing.Printing in .net core.
 
 Can someone guide me on this?",
-    owner_id:13
+    owner_id:2
 )
 
 Question.create!(
     title:"Javascript won't draw the animation taking value from HTML input element",
     body:"I'm trying to do something like the following in React JSX (where ObjectRow is a separate component):",
-    owner_id:14
+    owner_id:2
 )
 
 Question.create!(
@@ -85,7 +85,7 @@ I see internally it calls this.context.transitionTo(...).
 I want to do a navigation, but not from a link, from a dropdown selection for example. How can I do this in code? What is this.context?
 
 I saw the Navigation mixin, but can I do this without mixins?",
-    owner_id:5
+    owner_id:8
 )
 
 Question.create!(
@@ -94,7 +94,7 @@ Question.create!(
     and when a DUPLICATE KEY error exists, i use the ON DUPLICATE KEY UPDATE 
     statement to create a new records with a different number. Example:
 Duplicate key is only on the name!",
-    owner_id:6
+    owner_id:2
 )
 
 Question.create!(
@@ -102,7 +102,7 @@ Question.create!(
     body:"So I have an API endpoint that creates a Cache and validate if that cache 
     exist. However the Lookup Cache policy shows different responses across repeated 
     request of the same payload. It would show either true or false across multiple request. Why is this so?.",
-    owner_id:7
+    owner_id:2
 )
 
 Question.create!(
@@ -111,7 +111,7 @@ Question.create!(
     I have this code which does extract the rows with True matches from the table, 
     but the problem is the iteration is printing it 5 times(as many rows in table)
 I know, I'm missing something silly.. Can anyone help me here please?",
-    owner_id:9
+    owner_id:2
 )
 
 

@@ -34,7 +34,7 @@ class QuestionsIndex extends React.Component{
 
                 {this.props.question.map((question, idx) => (
                   <ul id="qidxitem" key={idx}>
-                    <QuestionIndexItem key={idx} question={question} fetchTagQuestions={this.props.fetchTagQuestions} />
+                    <QuestionIndexItem key={idx} id={question.id} question={question} fetchTagQuestions={this.props.fetchTagQuestions} />
                   </ul>
                 ))}
                 <h2>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link,withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 // const QuestionIndexItem = props => {
 //   return (
@@ -27,13 +27,13 @@ class QuestionIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tag_name:''
-    }
+      tag_name: ""
+    };
     this.tag_search = this.tag_search.bind(this);
   }
 
   tag_search(name) {
-    // console.log(name); 
+    // console.log(name);
     // this.props.tag_search;
     this.props.history.push(`tag_search/q=${name}`);
   }
@@ -42,8 +42,8 @@ class QuestionIndexItem extends React.Component {
     return (
       <div id="qindexitem">
         <nav>
-          <Link to={`/questions/${this.props.question.id}`}>
-            <li id="questions-list" key={this.props.question.id}>
+          <Link to={`/questions/${this.props.id}`}>
+            <li id="questions-list" key={this.props.id}>
               {this.props.question.title}
             </li>
           </Link>
@@ -55,7 +55,7 @@ class QuestionIndexItem extends React.Component {
                 name={tag.name}
                 id="button"
                 key={id}
-                onClick={()=>this.tag_search(tag.name)}
+                onClick={() => this.tag_search(tag.name)}
               >
                 {tag.name}
               </li>

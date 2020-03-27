@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import QuestionsIndex from "./questions_index";
 import Footer from "./../home/footer";
 import DOMPurify from "dompurify";
-
+import hljs from 'highlight.js';
 import ReactQuill, { Quill } from "react-quill";
 
 import parse from "html-react-parser";
@@ -14,6 +14,7 @@ export default class QuestionForm extends React.Component {
     super(props);
     this.props.clearErrors();
     this.modules = {
+      // syntax: true,
       toolbar: [
         [{ font: [] }],
         [{ size: ["small", false, "large", "huge"] }],
@@ -21,6 +22,7 @@ export default class QuestionForm extends React.Component {
         [{ list: "ordered" }, { list: "bullet" }],
         [{ align: [] }],
         [{ color: [] }, { background: [] }],
+        // [["code-block"]],
         ["clean"]
       ]
     };

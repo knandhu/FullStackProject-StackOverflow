@@ -1278,8 +1278,8 @@ input.searchbar:focus {
   margin-bottom: 20px;
 }
 #tag-page {
-  position: relative;
-  top: 70px;
+  /* position: relative;
+  top: 70px; */
 }
 #tag-page ul {
   list-style: none;

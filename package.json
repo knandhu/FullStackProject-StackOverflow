@@ -5,6 +5,7 @@
     "@babel/core": "^7.7.7",
     "babel-loader": "^8.0.6",
     "dompurify": "^2.0.7",
+    "highlight.js": "^9.18.1",
     "html-react-parser": "^0.10.0",
     "jodit-react": "^1.0.35",
     "react": "^16.12.0",
