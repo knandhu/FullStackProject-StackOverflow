@@ -792,7 +792,7 @@ body {
 }
 
 /* #root #main-page #search-page #left-nav { */
-  /* position: fixed;
+/* position: fixed;
   left: 200px;
   border: none; */
 /* } */
@@ -1092,9 +1092,20 @@ textarea {
   font-size: 5px;
   font-family: Arial, Helvetica, sans-serif;
 }
-#q-index #tags #button,
-#q-detail #tags li,
+
 #search-results li #tags #button {
+  width: fit-content;
+  background-color: #cedfed;
+  color: #32658a;
+  padding: 3px 5px;
+  text-align: center;
+  margin: 6px 2px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#q-index #tags #button,
+#q-detail #tags li {
   width: fit-content;
   background-color: #cedfed;
   color: #32658a;
