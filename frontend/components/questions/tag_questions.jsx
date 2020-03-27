@@ -1,6 +1,6 @@
 import React from "react";
 import TagPageItem from "./../questions/tag_page_item";
-// import LeftNavigationBar from "./../navbar/left_navigation_form";
+import LeftNavigationBar from "./../navbar/left_navigation_form";
 import Footer from "./../home/footer";
 
 export default class TagQuestions extends React.Component {
@@ -26,10 +26,10 @@ export default class TagQuestions extends React.Component {
     return (
       <div>
         <div id="tag-page">
-          <ul id="search-results">
+                <ul id="search-results">
+                    <LeftNavigationBar></LeftNavigationBar>
             <div id="border">
               <h3>List of Questions with Tag: {this.props.tagName}</h3>
-              <br />
               {this.props.tagresults.length != 0 ? (
                 this.props.tagresults.map((ques, idx) => (
                   <li key={idx}>
