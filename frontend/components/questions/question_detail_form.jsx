@@ -7,7 +7,7 @@ import Footer from './../home/footer';
 import AnswerForm from './../answers/answer_form';
 import AnswerContainer from '../answers/answer_container';
 import CreateAnswerFormContainer from './../answers/create_answer_form_container';
-import { createHistory } from 'history';
+// import { createHistory } from 'history';
 import Answer from './../answers/answer';
 import ReactQuill from "react-quill";
 
