@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from "react-router";
 
 class AnswerListAll extends React.Component{
     constructor(props) {
