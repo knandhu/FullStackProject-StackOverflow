@@ -29,7 +29,7 @@ class Answer extends React.Component{
           }}
           readOnly={true}
           
-        // contenteditable:
+
         />
         {this.props.owner ? <div id ='owner'>Posted By: {this.props.owner.username}</div> : null}
       </div>
