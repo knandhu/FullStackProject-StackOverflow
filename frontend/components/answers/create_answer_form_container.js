@@ -1,8 +1,4 @@
-{/* <AnswerForm
-  answer={this.props.answer}
-  createAnswer={this.props.createAnswer}
-  requestAnswers={this.props.requestAnswers}
-/>; */}
+
 
 
 
