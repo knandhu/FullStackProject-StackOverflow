@@ -24,7 +24,6 @@ import TagSearchContainer from "./questions/tag_search_container";
 import TagsContainer from "./tags/tags_container";
 import UsersContainer from "./users/users_container";
 import NotFound from "./not_found";
-// import Footer from './home/footer';
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
