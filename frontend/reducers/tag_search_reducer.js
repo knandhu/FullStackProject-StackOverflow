@@ -12,7 +12,7 @@ const tagsearchReducer = (oldState = [], action) => {
 
     case CLEAR_TAG_SEARCH:
       // let nextState = Object.assign({}, oldState);
-      // nextState.entities.search = [];
+     
       return [];
 
     default:
