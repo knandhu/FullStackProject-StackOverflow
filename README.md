@@ -1,6 +1,9 @@
 
 # getAnswers
 
+[GetAnswers](https://get-ans.herokuapp.com/#/) live website
+
+
 # Table of Contents
 
   1.Introduction
@@ -84,9 +87,6 @@
 * Front-End: `React`, `Redux`
 * Back-End: `Ruby on Rails`, `PostgresSQL`
 
-# Live Website
-
-[GetAnswers](https://get-ans.herokuapp.com/#/) live website
 
 # Future Enhancements
 
