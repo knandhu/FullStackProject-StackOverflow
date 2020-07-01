@@ -12,9 +12,7 @@
   
   3.Technologies
   
-  4.Live Website
-  
-  5.Future Enhancements
+  4.Future Enhancements
 
 # Introduction
   
