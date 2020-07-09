@@ -3,7 +3,6 @@ import { createQuestion, fetchQuestions, clearErrors } from "../../actions/quest
 import QuestionForm from './question_form';
 const mapStateToProps = ({ errors, session, entities: { users } }) => {
   // const session = state.session;
-  // const users = state.entities.users;
   return ({
     question: {
       title: '',
