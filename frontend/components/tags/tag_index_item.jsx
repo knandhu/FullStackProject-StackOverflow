@@ -20,13 +20,7 @@ class TagIndexItem extends React.Component{
         );    
     }
 }
-// const TagIndexItem = (props) => {
-//     return (
-//         <div>
-//             {props.tag.name}
-//         </div>
-//     );
-// }
+
 
 
 export default withRouter(TagIndexItem);
