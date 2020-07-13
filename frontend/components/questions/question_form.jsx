@@ -22,7 +22,6 @@ export default class QuestionForm extends React.Component {
         [{ list: "ordered" }, { list: "bullet" }],
         [{ align: [] }],
         [{ color: [] }, { background: [] }],
-        // [["code-block"]],
         ["clean"]
       ]
     };
