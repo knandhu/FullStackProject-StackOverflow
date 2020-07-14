@@ -8,7 +8,6 @@ class Home extends React.Component{
             <div id='bg'>
               
             </div>
-            {/* <img id="bg" src={window.bgURL} /> */}
             <div id="text">
               <h2>For developers, by developers</h2>
               <br />
