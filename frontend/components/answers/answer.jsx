@@ -21,7 +21,6 @@ class Answer extends React.Component{
   render() {
     return (
       <div>
-        {/* {props.answer.response} */}
         <ReactQuill
           value={this.props.answer.response}
           modules={{
