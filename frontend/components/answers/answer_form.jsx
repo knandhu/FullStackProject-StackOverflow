@@ -36,8 +36,6 @@ class AnswerForm extends React.Component {
       "background"
     ];
 
-    //  this.richText = document.getElementsByClassName("ql-editor")[0];
-  }
   componentDidMount() {
     this.props.fetchQuestion(this.props.question);
   }
