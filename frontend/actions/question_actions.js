@@ -1,7 +1,6 @@
 import * as QuestionAPIUtil from "./../util/question_api_util";
 import QuestionsIndex from "../components/questions/questions_index";
 import QuestionDetailForm from "../components/questions/question_detail_form";
-// import { receiveErrors } from './session_actions';
 import { createHistory } from "history";
 import { searchQuestions } from "./../util/search_questions_api_util";
 
