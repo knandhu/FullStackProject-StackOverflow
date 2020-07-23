@@ -9,7 +9,6 @@ const answersReducer = (oldState = {}, action) => {
             return Object.assign({}, oldState, action.answers);
         
         case RECEIVE_ANSWER:
-            // return action.answer;
             nextState = Object.assign({}, oldState);
             nextState[action.answer.id] = action.answer;
             // nextState[action.answer.id].owner = action.answer.owner.slice(0)
