@@ -9,7 +9,6 @@ const searchReducer = (oldState = [], action) => {
         
         case CLEAR_SEARCH:
             // let nextState = Object.assign({}, oldState);
-            // nextState.entities.search = [];
             return [];
         
     
