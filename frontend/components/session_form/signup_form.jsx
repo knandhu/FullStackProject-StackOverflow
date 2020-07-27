@@ -52,7 +52,6 @@ class SignUpForm extends React.Component {
             Use the power of Stack Overflow inside your organization. Try a
             {/* <div id="highlight-text"> */}
               free trial of Stack Overflow for Teams.
-            {/* </div> */}
           </div>
         </span>
 
