@@ -1,7 +1,6 @@
 
 import React from "react";
 import { Route, Link, HashRouter, withRouter } from "react-router-dom";
-// import { searchQuestions } from './../../util/search_questions_api_util';
 // import SearchBarContainer from './../questions/search_bar_container';
 // import SearchPage from "../questions/search_page";
 class NavBar extends React.Component {
