@@ -9,7 +9,6 @@ class NavBar extends React.Component {
       };
     
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.search = this.search.bind(this);
   }
 
   sessionLinks() {
