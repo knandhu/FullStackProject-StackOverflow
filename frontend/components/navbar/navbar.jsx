@@ -42,10 +42,7 @@ class NavBar extends React.Component {
             <Link to='/questions/ask'>Ask Question</Link>
           </div>
         </div>
-      {/* <img src="assets/inbox-icon.png" height="20" width="20" />
-      <img src="assets/trophy-icon.png" height="20" width="20" />
-      <img src="assets/ques-icon.png" height="20" width="20" />
-      <img src="assets/drop-list-icon.png" height="20" width="20" /> */}
+    
       <button className="header-button" onClick={this.props.logout}>
         Log Out
       </button>
