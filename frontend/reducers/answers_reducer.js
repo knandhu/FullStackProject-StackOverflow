@@ -13,7 +13,6 @@ const answersReducer = (oldState = {}, action) => {
             nextState[action.answer.id] = action.answer;
             // nextState[action.answer.id].owner = action.answer.owner.slice(0)
             return nextState;
-            // nextState[action.answer.id] = action.answer;
     
         default:
             return oldState;
