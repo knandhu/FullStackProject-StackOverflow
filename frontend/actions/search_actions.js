@@ -2,7 +2,6 @@ import { searchQuestions } from './../util/search_questions_api_util';
 export const RECEIVE_SEARCH_QUESTIONS = 'RECEIVE_SEARCH_QUESTIONS';
 export const CLEAR_SEARCH = 'CLEAR_SEARCH';
 
-// export const CLEAR_SEARCH = 'CLEAR_SEARCH';
 
 const recieveQuestions = (questions) => ({
     type: RECEIVE_SEARCH_QUESTIONS,
