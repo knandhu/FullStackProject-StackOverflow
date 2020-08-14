@@ -13,7 +13,7 @@
 #
 #  index_answers_on_owner_id     (owner_id)
 #  index_answers_on_question_id  (question_id)
-#
+
 
 class Answer < ApplicationRecord
     validates :response, :question_id, :owner_id, presence:true
