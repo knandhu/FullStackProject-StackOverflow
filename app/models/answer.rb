@@ -10,7 +10,7 @@
 #  question_id :integer          not null
 #
 # Indexes
-#
+
 #  index_answers_on_owner_id     (owner_id)
 #  index_answers_on_question_id  (question_id)
 
