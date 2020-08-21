@@ -2,6 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
 // const QuestionIndexItem = props => {
+
 //   return (
 //     <div id="qindexitem">
 //       <nav>
