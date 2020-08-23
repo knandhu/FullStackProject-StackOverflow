@@ -19,7 +19,6 @@ const mapStateToProps = ({ errors, session, entities: { users } }) => {
 const mapDispatchToProps = dispatch => ({
   action: (question) => dispatch(createQuestion(question)),
   clearErrors: () => dispatch(clearErrors())
-  // allquestions: () => dispatch(fetchQuestions())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuestionForm);
