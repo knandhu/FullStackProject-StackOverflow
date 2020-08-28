@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from './footer';
-
+//
 class Home extends React.Component{
     render() {
         return (
