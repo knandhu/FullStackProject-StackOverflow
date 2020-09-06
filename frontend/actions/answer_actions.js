@@ -1,5 +1,5 @@
 import * as AnswerAPIUtil from './../util/answer_api_util';
-
+//
 export const RECEIVE_ANSWER = 'RECEIVE_ANSWER';
 export const RECEIVE_ANSWERS = 'RECEIVE_ANSWERS';
 
