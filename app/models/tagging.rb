@@ -1,7 +1,7 @@
 # == Schema Information
 #
 # Table name: taggings
-#
+
 #  id          :bigint           not null, primary key
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
