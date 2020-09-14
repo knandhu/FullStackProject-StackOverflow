@@ -1,7 +1,7 @@
 # == Schema Information
 #
 # Table name: answers
-#
+
 #  id          :bigint           not null, primary key
 #  response    :string           not null
 #  created_at  :datetime         not null
