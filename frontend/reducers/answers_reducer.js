@@ -1,5 +1,5 @@
 import { RECEIVE_ANSWER, RECEIVE_ANSWERS } from './../actions/answer_actions';
-
+//
 const answersReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let nextState;
