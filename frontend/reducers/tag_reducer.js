@@ -1,5 +1,5 @@
 import { RECEIVE_TAGS } from './../actions/tag_actions';
-
+//
 const tagReducer = (oldState = [], action) => {
     Object.freeze(oldState);
 
