@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { createQuestion, fetchQuestions, clearErrors } from "../../actions/question_actions";
 import QuestionForm from './question_form';
-//
+
 const mapStateToProps = ({ errors, session, entities: { users } }) => {
   return ({
     question: {
