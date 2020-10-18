@@ -2,7 +2,7 @@ import React from 'react';
 import TagIndexItem from './tag_index_item';
 import LeftNavigationBar from './../navbar/left_navigation_form';
 import Footer from './../home/footer';
-
+//
 class TagsIndex extends React.Component{
     constructor(props) {
         super(props);
