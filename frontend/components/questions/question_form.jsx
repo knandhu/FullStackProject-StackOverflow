@@ -5,7 +5,7 @@ import Footer from "./../home/footer";
 import DOMPurify from "dompurify";
 import hljs from 'highlight.js';
 import ReactQuill, { Quill } from "react-quill";
-
+//
 import parse from "html-react-parser";
 import { createHistory } from "history";
 
